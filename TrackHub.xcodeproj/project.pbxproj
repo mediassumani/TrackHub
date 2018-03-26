@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		67681E13206943B30030F0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67681E12206943B30030F0B1 /* AppDelegate.swift */; };
-		67681E15206943B30030F0B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67681E14206943B30030F0B1 /* ViewController.swift */; };
 		67681E18206943B30030F0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67681E16206943B30030F0B1 /* Main.storyboard */; };
 		67681E1B206943B30030F0B1 /* TrackHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67681E19206943B30030F0B1 /* TrackHub.xcdatamodeld */; };
 		67681E1D206943B30030F0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67681E1C206943B30030F0B1 /* Assets.xcassets */; };
 		67681E20206943B30030F0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67681E1E206943B30030F0B1 /* LaunchScreen.storyboard */; };
+		67681E2E20699E970030F0B1 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67681E2D20699E970030F0B1 /* MainMenuViewController.swift */; };
+		67681E3020699F160030F0B1 /* TotalProfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67681E2F20699F160030F0B1 /* TotalProfitViewController.swift */; };
+		67681E3220699F380030F0B1 /* ProfitMadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67681E3120699F380030F0B1 /* ProfitMadeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		67681E0F206943B30030F0B1 /* TrackHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67681E12206943B30030F0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		67681E14206943B30030F0B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		67681E17206943B30030F0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67681E1A206943B30030F0B1 /* TrackHub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackHub.xcdatamodel; sourceTree = "<group>"; };
 		67681E1C206943B30030F0B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67681E1F206943B30030F0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67681E21206943B30030F0B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67681E2D20699E970030F0B1 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		67681E2F20699F160030F0B1 /* TotalProfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalProfitViewController.swift; sourceTree = "<group>"; };
+		67681E3120699F380030F0B1 /* ProfitMadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitMadeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		67681E11206943B30030F0B1 /* TrackHub */ = {
 			isa = PBXGroup;
 			children = (
+				67681E2C206944FD0030F0B1 /* Coredata */,
+				67681E2B206944ED0030F0B1 /* Extensions */,
+				67681E2A206944CD0030F0B1 /* Networking */,
+				67681E29206944C70030F0B1 /* Views */,
+				67681E28206944C00030F0B1 /* Controllers */,
+				67681E27206944790030F0B1 /* Models */,
 				67681E12206943B30030F0B1 /* AppDelegate.swift */,
-				67681E14206943B30030F0B1 /* ViewController.swift */,
 				67681E16206943B30030F0B1 /* Main.storyboard */,
 				67681E1C206943B30030F0B1 /* Assets.xcassets */,
 				67681E1E206943B30030F0B1 /* LaunchScreen.storyboard */,
 				67681E21206943B30030F0B1 /* Info.plist */,
-				67681E19206943B30030F0B1 /* TrackHub.xcdatamodeld */,
 			);
 			path = TrackHub;
+			sourceTree = "<group>";
+		};
+		67681E27206944790030F0B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67681E28206944C00030F0B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				67681E2D20699E970030F0B1 /* MainMenuViewController.swift */,
+				67681E2F20699F160030F0B1 /* TotalProfitViewController.swift */,
+				67681E3120699F380030F0B1 /* ProfitMadeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		67681E29206944C70030F0B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67681E2A206944CD0030F0B1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		67681E2B206944ED0030F0B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		67681E2C206944FD0030F0B1 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				67681E19206943B30030F0B1 /* TrackHub.xcdatamodeld */,
+			);
+			path = Coredata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67681E2E20699E970030F0B1 /* MainMenuViewController.swift in Sources */,
+				67681E3020699F160030F0B1 /* TotalProfitViewController.swift in Sources */,
 				67681E1B206943B30030F0B1 /* TrackHub.xcdatamodeld in Sources */,
-				67681E15206943B30030F0B1 /* ViewController.swift in Sources */,
 				67681E13206943B30030F0B1 /* AppDelegate.swift in Sources */,
+				67681E3220699F380030F0B1 /* ProfitMadeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
