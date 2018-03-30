@@ -1,5 +1,5 @@
 //
-//  ProfitMadeViewController.swift
+//  TotalInvestmentMade.swift
 //  TrackHub
 //
 //  Created by Assumani, Medi on 3/26/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfitMadeViewController: UIViewController {
+class TotalInvestmentMade: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
