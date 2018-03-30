@@ -10,49 +10,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--TotalProfitViewController-->
         <scene sceneID="seJ-8M-nuB">
             <objects>
-                <viewController id="Xio-Nq-Uiy" customClass="TotalProfitViewController" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TotalProfitViewController" id="Xio-Nq-Uiy" customClass="TotalProfitViewController" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gqN-21-oTv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RA9-S9-L7H"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="0gs-if-ccU"/>
+                    <tabBarItem key="tabBarItem" title="Profit" image="money" id="0gs-if-ccU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nxh-re-DbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1282" y="392"/>
         </scene>
-        <!--Item 1-->
+        <!--MainMenuViewController-->
         <scene sceneID="ohZ-cv-Ro1">
             <objects>
-                <viewController id="sgi-XH-KSa" customClass="MainMenuViewController" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainMenuViewController" id="sgi-XH-KSa" customClass="MainMenuViewController" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mwv-QH-e8x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Vcf-wi-r6I"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="TtT-6m-HCt"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="TtT-6m-HCt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wi7-ph-bVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1282" y="-261"/>
         </scene>
-        <!--Item-->
+        <!--TotalInvestmentMade-->
         <scene sceneID="ieu-og-Av3">
             <objects>
-                <viewController id="CWU-RT-km7" customClass="TotalInvestmentMade" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TotalInvestmentMade" id="CWU-RT-km7" customClass="TotalInvestmentMade" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C6J-Yo-86Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BT3-2s-gkm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="tXG-cn-b1i"/>
+                    <tabBarItem key="tabBarItem" title="Investment" image="investment" id="tXG-cn-b1i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrN-jj-LcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,4 +78,9 @@
             <point key="canvasLocation" x="-2353" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="25" height="25"/>
+        <image name="investment" width="25" height="25"/>
+        <image name="money" width="25" height="25"/>
+    </resources>
 </document>
