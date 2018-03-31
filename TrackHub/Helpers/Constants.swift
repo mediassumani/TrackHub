@@ -11,5 +11,6 @@ import UIKit
 
 struct Constants{
     
-    public let mainMenuCellIdentifier : String = "productCell"
+    let mainMenuCellIdentifier : String = "productCell"
+    let cellSpacingHeight: CGFloat = 5
 }

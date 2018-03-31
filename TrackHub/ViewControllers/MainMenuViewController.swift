@@ -13,27 +13,30 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     // - MARK : @IBOULETS
     
     @IBOutlet weak var tableView: UITableView!
+    let cellSpacingHeight: CGFloat = 5
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorColor = UIColor.white
     }
-    
+
     // - MARK : UITableView Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductCell
-        cell.productNameLabel.text = "Product Name"
-        cell.productProfitLabel.text = "$200"
-        cell.productPictureView.image = UIImage(named: "money")
+        cell.productNameLabel.text = "Pink Lady Top"
+        cell.productProfitLabel.text = "$15"
+        cell.productImage.image = UIImage(named: "pinkTop")
         return cell
     }
+    
 
     
 }
