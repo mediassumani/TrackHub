@@ -28,7 +28,6 @@ public class TimeHelper{
             timeIsNight(textView: greetingTextView)
         }
         
-        
     }
     
     fileprivate func timeIsMorning(textView: UITextView){
