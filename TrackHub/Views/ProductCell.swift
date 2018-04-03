@@ -15,8 +15,7 @@ class ProductCell: UITableViewCell {
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productProfitLabel: UILabel!
-    
-    
+   
     override func awakeFromNib() {
         super.awakeFromNib()
                 // Setting up the Cell Views
@@ -25,14 +24,17 @@ class ProductCell: UITableViewCell {
             return
         }
         
+//<<<<<<< HEAD
 
         //cellView.layer.cornerRadius = image.frame.height / 2
+//=======
+        cellView.layer.cornerRadius = image.frame.height / 2
+//>>>>>>> 49a932e1be99ac03fbc778d467a7fbc76c5eeddb
         image.layer.cornerRadius = image.frame.size.width / 2
         image.clipsToBounds = true
         name.textColor = UIColor.black
         profit.textColor = UIColor.green
-    
-
+   
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
