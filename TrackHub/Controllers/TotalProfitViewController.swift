@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TotalProfitViewController: UIViewController {
+public class TotalProfitViewController: UIViewController {
 
     // - MARK : @IBOULETS
     
@@ -16,31 +16,16 @@ class TotalProfitViewController: UIViewController {
     @IBOutlet weak var profitAmountLabel: UILabel!
     
     // - VIEW CONTROLLER METHODS
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
+        TimeHelper.singleton.displayGreeting(greetingTextView: greetingView)
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    // CLASS METHODS
-    fileprivate func displayGreeting(textView: UITextView, currentTime: NSDate){
-        
-    }
-    
-    fileprivate func timeIsMorning(){
-        
-    }
-    
-    fileprivate func timeIsEvening(){
-        
-    }
-    
-    fileprivate func timeIsNight(){
-        
-    }
 }
