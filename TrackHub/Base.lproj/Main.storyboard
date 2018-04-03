@@ -14,23 +14,56 @@
         <scene sceneID="seJ-8M-nuB">
             <objects>
                 <viewController title="TotalProfitViewController" id="Xio-Nq-Uiy" customClass="TotalProfitViewController" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gqN-21-oTv">
+                    <view key="view" contentMode="scaleToFill" id="gqN-21-oTv" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-aE-7DD" userLabel="subView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="     Good Morning (name)    You've made a total profit of :" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-Yw-346" userLabel="greetingView">
+                                        <rect key="frame" x="49" y="107" width="290" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$375.29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-yU-dZ4" userLabel="profitAmountLabel">
+                                        <rect key="frame" x="67" y="299" width="240" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RA9-S9-L7H" firstAttribute="trailing" secondItem="QNd-aE-7DD" secondAttribute="trailing" id="Vn9-Ah-Y1f"/>
+                            <constraint firstItem="RA9-S9-L7H" firstAttribute="bottom" secondItem="QNd-aE-7DD" secondAttribute="bottom" id="fSm-2D-nSz"/>
+                            <constraint firstItem="QNd-aE-7DD" firstAttribute="leading" secondItem="RA9-S9-L7H" secondAttribute="leading" id="fXl-bd-P4E"/>
+                            <constraint firstItem="QNd-aE-7DD" firstAttribute="top" secondItem="RA9-S9-L7H" secondAttribute="top" id="gyN-kx-aIe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RA9-S9-L7H"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profit" image="money" id="0gs-if-ccU"/>
+                    <connections>
+                        <outlet property="greetingView" destination="QQV-Yw-346" id="YiX-SG-n3T"/>
+                        <outlet property="profitAmountLabel" destination="Ioe-yU-dZ4" id="geX-C0-7lM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nxh-re-DbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1282" y="392"/>
+            <point key="canvasLocation" x="-1282.4000000000001" y="391.62561576354682"/>
         </scene>
         <!--MainMenuViewController-->
         <scene sceneID="ohZ-cv-Ro1">
             <objects>
                 <viewController title="MainMenuViewController" id="sgi-XH-KSa" customClass="MainMenuViewController" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mwv-QH-e8x">
+                    <view key="view" contentMode="scaleToFill" id="Mwv-QH-e8x" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -118,7 +151,11 @@
                         <viewLayoutGuide key="safeArea" id="Vcf-wi-r6I"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Products" id="HNK-H9-EgL" userLabel="TrackHub">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JgM-aU-PHU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JgM-aU-PHU">
+                            <connections>
+                                <segue destination="5go-08-VUy" kind="show" id="hOs-H8-cIR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="cUE-gl-uk4" id="3kB-l0-rrC"/>
@@ -128,20 +165,64 @@
             </objects>
             <point key="canvasLocation" x="-799.20000000000005" y="-262.3152709359606"/>
         </scene>
-        <!--Show Product View Controller-->
+        <!--Title-->
         <scene sceneID="EIn-Zb-UT5">
             <objects>
                 <viewController id="5go-08-VUy" customClass="ShowProductViewController" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lCQ-Av-ZD1">
+                    <view key="view" contentMode="scaleToFill" id="lCQ-Av-ZD1" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QId-cH-wa4" userLabel="subView">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="snF-u1-BHe">
+                                        <rect key="frame" x="85" y="50" width="204" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brand" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-6w-9qz">
+                                        <rect key="frame" x="85" y="104" width="204" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wholesale Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sqq-Wd-0mp">
+                                        <rect key="frame" x="85" y="159" width="204" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QId-cH-wa4" firstAttribute="top" secondItem="Ngh-La-R0t" secondAttribute="top" id="K1u-Ke-pBP"/>
+                            <constraint firstItem="QId-cH-wa4" firstAttribute="leading" secondItem="Ngh-La-R0t" secondAttribute="leading" id="TAZ-me-OLd"/>
+                            <constraint firstItem="Ngh-La-R0t" firstAttribute="bottom" secondItem="QId-cH-wa4" secondAttribute="bottom" id="baR-2a-UGj"/>
+                            <constraint firstItem="Ngh-La-R0t" firstAttribute="trailing" secondItem="QId-cH-wa4" secondAttribute="trailing" id="sb1-fx-Uds"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ngh-La-R0t"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="1E2-JH-5xt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hMG-rG-0fC">
+                            <connections>
+                                <segue destination="Fxf-V4-QOr" kind="unwind" unwindAction="unwindWithSegue:" id="AeH-R2-48j"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RNQ-al-XRY"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szq-K4-o6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Fxf-V4-QOr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-47" y="-262"/>
+            <point key="canvasLocation" x="-47.200000000000003" y="-262.3152709359606"/>
         </scene>
         <!--TotalInvestmentMade-->
         <scene sceneID="ieu-og-Av3">

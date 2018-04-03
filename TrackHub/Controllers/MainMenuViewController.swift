@@ -37,6 +37,16 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    // - MARK : SEGUE METHODS
+    
+    /*
+     This function prevents the navigation from VC's to cause memmory leaks
+     - parameter segue : The segue to the destination VC
+     */
+    @IBAction func unwindWithSegue(_ segue : UIStoryboardSegue){
+        // empty for now
+    }
+    
 
     
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+/*
 public class Product{
     
     private var productName: String = ""
@@ -22,3 +22,4 @@ public class Product{
     private var category: ProductCategory = .dress // default value
     private var image: UIImage
 }
+*/

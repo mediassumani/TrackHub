@@ -85,7 +85,7 @@
 				67681E2B206944ED0030F0B1 /* Extensions */,
 				67681E2A206944CD0030F0B1 /* Services */,
 				67681E29206944C70030F0B1 /* Views */,
-				67681E28206944C00030F0B1 /* ViewControllers */,
+				67681E28206944C00030F0B1 /* Controllers */,
 				67681E27206944790030F0B1 /* Models */,
 				67681E12206943B30030F0B1 /* AppDelegate.swift */,
 				67681E16206943B30030F0B1 /* Main.storyboard */,
@@ -105,7 +105,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		67681E28206944C00030F0B1 /* ViewControllers */ = {
+		67681E28206944C00030F0B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				67681E2D20699E970030F0B1 /* MainMenuViewController.swift */,
@@ -113,7 +113,7 @@
 				67681E3120699F380030F0B1 /* TotalInvestmentMade.swift */,
 				670A7E2D206EBE8200C65AEA /* ShowProductViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		67681E29206944C70030F0B1 /* Views */ = {

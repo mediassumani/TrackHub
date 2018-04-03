@@ -10,6 +10,12 @@ import UIKit
 
 class TotalProfitViewController: UIViewController {
 
+    // - MARK : @IBOULETS
+    
+    @IBOutlet weak var greetingView: UITextView!
+    @IBOutlet weak var profitAmountLabel: UILabel!
+    
+    // - VIEW CONTROLLER METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +27,20 @@ class TotalProfitViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // CLASS METHODS
+    fileprivate func displayGreeting(textView: UITextView, currentTime: NSDate){
+        
     }
-    */
-
+    
+    fileprivate func timeIsMorning(){
+        
+    }
+    
+    fileprivate func timeIsEvening(){
+        
+    }
+    
+    fileprivate func timeIsNight(){
+        
+    }
 }
