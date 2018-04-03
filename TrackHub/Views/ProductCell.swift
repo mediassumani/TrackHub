@@ -24,12 +24,9 @@ class ProductCell: UITableViewCell {
             return
         }
         
-//<<<<<<< HEAD
 
         //cellView.layer.cornerRadius = image.frame.height / 2
-//=======
         cellView.layer.cornerRadius = image.frame.height / 2
-//>>>>>>> 49a932e1be99ac03fbc778d467a7fbc76c5eeddb
         image.layer.cornerRadius = image.frame.size.width / 2
         image.clipsToBounds = true
         name.textColor = UIColor.black
