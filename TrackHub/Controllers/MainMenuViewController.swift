@@ -10,11 +10,16 @@ import UIKit
 import Foundation
 
 class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    // - MARK : @IBOULETS
+    //-MARK : @IBOULETS
     
     @IBOutlet weak var tableView: UITableView!
-    let cellSpacingHeight: CGFloat = 5
     
+    //-MARK : PROPERTIES
+    var userProducts = [Product](){
+        didSet {
+           tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +31,15 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     // - MARK : UITableView Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductCell
-        cell.productNameLabel.text = "Pink Lady Top"
-        cell.productProfitLabel.text = "$15"
-        cell.productImage.image = UIImage(named: "pinkTop")
+        let product = userProducts[indexPath.row]
+        cell.productNameLabel.text = product.productName
+        cell.productProfitLabel.text = product.getProductProfit().convertDoubleToString()
+        cell.productImage.image = UIImage(named: "noImage")
         return cell
     }
     

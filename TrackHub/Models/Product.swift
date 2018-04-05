@@ -8,18 +8,29 @@
 
 import Foundation
 import UIKit
-/*
+
 public class Product{
     
-    private var productName: String = ""
-    private var productBrand: String = ""
-    private var productSize: Int = 0
-    private var wholesalePrice: Double = 0.0
-    private var productProfit: Double = 0.0
-    private var priceOnAmazon: Double = 0.0
-    private var priceOnExpress: Double = 0.0
-    private var suggestedSellingPrice: Double = 0.0
-    private var category: ProductCategory = .dress // default value
-    private var image: UIImage
+    static var totalInvestment: Double = 0.0
+    var productName: String = ""
+    var productBrand: String = ""
+    var productSize: String = ""
+    var productWholesalePrice: Double = 0.0
+    var productProfit: Double = 0.0
+    var ProductPriceOnAmazon: Double = 0.0
+    var sellingPrice: Double = 0.0
+    var productCategory: ProductCategory = .dress // default value
+    
+    init() {
+       Product.totalInvestment += sellingPrice
+    }
+    
+    public func getProductProfit() -> Double{
+        
+        self.productProfit = sellingPrice - productWholesalePrice
+        return productProfit
+    }
+    
 }
-*/
+
+

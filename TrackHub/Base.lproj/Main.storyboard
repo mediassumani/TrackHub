@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cUE-gl-uk4" userLabel="ProductList">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="103" width="375" height="626"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="100" id="jeH-1g-jk1" customClass="ProductCell" customModule="TrackHub" customModuleProvider="target">
@@ -143,7 +143,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cUE-gl-uk4" firstAttribute="top" secondItem="Vcf-wi-r6I" secondAttribute="top" id="2XV-29-iK9"/>
+                            <constraint firstItem="cUE-gl-uk4" firstAttribute="top" secondItem="Vcf-wi-r6I" secondAttribute="top" constant="15" id="2XV-29-iK9"/>
                             <constraint firstItem="Vcf-wi-r6I" firstAttribute="bottom" secondItem="cUE-gl-uk4" secondAttribute="bottom" id="PaG-NV-6Hf"/>
                             <constraint firstItem="Vcf-wi-r6I" firstAttribute="trailing" secondItem="cUE-gl-uk4" secondAttribute="trailing" id="fbv-qU-AGF"/>
                             <constraint firstItem="cUE-gl-uk4" firstAttribute="leading" secondItem="Vcf-wi-r6I" secondAttribute="leading" id="ucd-1d-aq1"/>
@@ -191,7 +191,35 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wholesale Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sqq-Wd-0mp">
-                                        <rect key="frame" x="85" y="159" width="204" height="30"/>
+                                        <rect key="frame" x="85" y="223" width="204" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amazon Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBy-7Z-ig8" userLabel="amazonPrice">
+                                        <rect key="frame" x="85" y="271" width="204" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selling Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hp-K5-AxN" userLabel="sellingPrice">
+                                        <rect key="frame" x="85" y="320" width="204" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Size" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="62W-uO-CVH" userLabel="size">
+                                        <rect key="frame" x="85" y="165" width="204" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWg-1a-KiE">
+                                        <rect key="frame" x="85" y="365" width="204" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -218,6 +246,15 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="RNQ-al-XRY"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="amazonPriceLabel" destination="wBy-7Z-ig8" id="AbD-Ir-yqt"/>
+                        <outlet property="productBrandLabel" destination="8ob-6w-9qz" id="1a2-L2-6fn"/>
+                        <outlet property="productCategoryLabel" destination="tWg-1a-KiE" id="upL-kw-n1k"/>
+                        <outlet property="productNameLabel" destination="snF-u1-BHe" id="nGX-3t-kNZ"/>
+                        <outlet property="prudoctSizeLabel" destination="62W-uO-CVH" id="7N8-ab-fao"/>
+                        <outlet property="sellingPriceLabel" destination="5hp-K5-AxN" id="WCl-N5-mcl"/>
+                        <outlet property="wholesalePriceLabel" destination="Sqq-Wd-0mp" id="6Dq-DP-Rfe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szq-K4-o6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Fxf-V4-QOr" userLabel="Exit" sceneMemberID="exit"/>

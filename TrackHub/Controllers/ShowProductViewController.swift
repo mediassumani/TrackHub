@@ -10,6 +10,17 @@ import UIKit
 
 class ShowProductViewController: UIViewController {
 
+    //MARK: - @IBOULETS
+    
+    @IBOutlet weak var productNameLabel: UITextField!
+    @IBOutlet weak var productBrandLabel: UITextField!
+    @IBOutlet weak var prudoctSizeLabel: UITextField!
+    @IBOutlet weak var wholesalePriceLabel: UITextField!
+    @IBOutlet weak var amazonPriceLabel: UITextField!
+    @IBOutlet weak var sellingPriceLabel: UITextField!
+    @IBOutlet weak var productCategoryLabel: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
