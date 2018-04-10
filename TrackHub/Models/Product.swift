@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public class Product{
-    // single property to keep track of the totalamount invested
+    // single property to keep track of the total amount invested
     static var totalInvestment: Double = 0.0
     
     // Stored propertis
