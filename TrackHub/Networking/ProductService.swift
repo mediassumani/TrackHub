@@ -1,5 +1,5 @@
 //
-//  Networking.swift
+//  ProductService.swift
 //  TrackHub
 //
 //  Created by Assumani, Medi on 4/1/18.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-public struct Networking{
+public struct ProductService{
     
 }

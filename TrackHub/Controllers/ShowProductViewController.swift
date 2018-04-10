@@ -29,7 +29,6 @@ class ShowProductViewController: UIViewController {
     @IBOutlet weak var sellingPriceLabel: UITextField!
     @IBOutlet weak var productCategoryLabel: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,8 +36,7 @@ class ShowProductViewController: UIViewController {
             // If the user clicks on the save button...
     @IBAction func saveButtonIsTapped(_ sender: Any) {
         
-        
-                    // Safely Unwrapping the optionals iboulets
+                // Safely Unwrapping the optionals iboulets
         guard let name = productNameLabel.text, let brand = productBrandLabel.text, let size = productSizeLabel.text, let wholeSalePrice = wholesalePriceLabel.text?.convertSringToDouble(), let amazonPrice = amazonPriceLabel.text?.convertSringToDouble(), let sellingPrice = sellingPriceLabel.text?.convertSringToDouble(), let category = productCategoryLabel.text else {return}
         
                 // If we have a delegate...

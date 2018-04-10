@@ -10,7 +10,7 @@
 		670A7E2E206EBE8200C65AEA /* ShowProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A7E2D206EBE8200C65AEA /* ShowProductViewController.swift */; };
 		670A7E33206EC6DE00C65AEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A7E32206EC6DE00C65AEA /* Constants.swift */; };
 		6736FA9F206F077800A21A13 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736FA9E206F077800A21A13 /* ProductCell.swift */; };
-		6736FAA12071678B00A21A13 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736FAA02071678B00A21A13 /* Networking.swift */; };
+		6736FAA12071678B00A21A13 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736FAA02071678B00A21A13 /* ProductService.swift */; };
 		6736FAA3207167BF00A21A13 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736FAA2207167BF00A21A13 /* Product.swift */; };
 		67681E13206943B30030F0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67681E12206943B30030F0B1 /* AppDelegate.swift */; };
 		67681E18206943B30030F0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67681E16206943B30030F0B1 /* Main.storyboard */; };
@@ -29,7 +29,7 @@
 		670A7E2D206EBE8200C65AEA /* ShowProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowProductViewController.swift; sourceTree = "<group>"; };
 		670A7E32206EC6DE00C65AEA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6736FA9E206F077800A21A13 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
-		6736FAA02071678B00A21A13 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		6736FAA02071678B00A21A13 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		6736FAA2207167BF00A21A13 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		67681E0F206943B30030F0B1 /* TrackHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67681E12206943B30030F0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				670A7E31206EC6CF00C65AEA /* Helpers */,
 				67681E2C206944FD0030F0B1 /* Coredata */,
 				67681E2B206944ED0030F0B1 /* Extensions */,
-				67681E2A206944CD0030F0B1 /* Services */,
+				67681E2A206944CD0030F0B1 /* Networking */,
 				67681E29206944C70030F0B1 /* Views */,
 				67681E28206944C00030F0B1 /* Controllers */,
 				67681E27206944790030F0B1 /* Models */,
@@ -129,12 +129,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		67681E2A206944CD0030F0B1 /* Services */ = {
+		67681E2A206944CD0030F0B1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				6736FAA02071678B00A21A13 /* Networking.swift */,
+				6736FAA02071678B00A21A13 /* ProductService.swift */,
 			);
-			path = Services;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		67681E2B206944ED0030F0B1 /* Extensions */ = {
@@ -229,7 +229,7 @@
 				670A7E2E206EBE8200C65AEA /* ShowProductViewController.swift in Sources */,
 				676D70EE207447CE00E8217F /* TimeHelper.swift in Sources */,
 				67681E3020699F160030F0B1 /* TotalProfitViewController.swift in Sources */,
-				6736FAA12071678B00A21A13 /* Networking.swift in Sources */,
+				6736FAA12071678B00A21A13 /* ProductService.swift in Sources */,
 				67681E1B206943B30030F0B1 /* TrackHub.xcdatamodeld in Sources */,
 				67681E13206943B30030F0B1 /* AppDelegate.swift in Sources */,
 				6736FA9F206F077800A21A13 /* ProductCell.swift in Sources */,
