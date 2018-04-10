@@ -10,16 +10,18 @@ import UIKit
 import Foundation
 
 class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    //-MARK : @IBOULETS
+    // MARK: @IBOULETS
     
     @IBOutlet weak var tableView: UITableView!
     
-    //-MARK : PROPERTIES
+    // computed property - keeps track of all the client's products
     var userProducts = [Product](){
-        didSet {
-           tableView.reloadData()
+        didSet{
+            // if there is any update on the list of books...the tableview updates
+            tableView.reloadData()
         }
     }
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.separatorColor = UIColor.white
     }
 
-    // - MARK : UITableView Methods
+    // MARK: UITableView Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userProducts.count
@@ -55,6 +57,22 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // empty for now
     }
     
-
+}
+// extending the mainMenuVC to implement and use the data sent from protocol
+extension MainMenuViewController: ProductDataSenderDelegate{
     
+    func sendData(productData: Product) {
+        
+        // adds the created product in the list of product
+       self.userProducts.append(productData)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "addProduct"{
+            let sendingViewController: ShowProductViewController = segue.destination as! ShowProductViewController
+                // sets the VC delegate as itself so it wont be nil...
+            sendingViewController.delegate = self
+        }
+    }
 }
