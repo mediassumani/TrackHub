@@ -19,7 +19,7 @@ public class Product{
     var productProfit: Double = 0.0
     var ProductPriceOnAmazon: Double = 0.0
     var sellingPrice: Double = 0.0
-    var productCategory: ProductCategory = .dress // default value
+    var productCategory: String = ""
     
     init() {
        Product.totalInvestment += sellingPrice

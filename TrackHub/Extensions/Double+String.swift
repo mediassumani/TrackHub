@@ -14,3 +14,9 @@ extension Double{
         return String(self)
     }
 }
+
+extension String{
+    func convertSringToDouble() -> Double{
+        return Double(self)!
+    }
+}

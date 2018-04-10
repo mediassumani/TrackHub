@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ShowProductViewController: UIViewController {
 
@@ -14,7 +15,7 @@ class ShowProductViewController: UIViewController {
     
     @IBOutlet weak var productNameLabel: UITextField!
     @IBOutlet weak var productBrandLabel: UITextField!
-    @IBOutlet weak var prudoctSizeLabel: UITextField!
+    @IBOutlet weak var productSizeLabel: UITextField!
     @IBOutlet weak var wholesalePriceLabel: UITextField!
     @IBOutlet weak var amazonPriceLabel: UITextField!
     @IBOutlet weak var sellingPriceLabel: UITextField!
@@ -24,14 +25,6 @@ class ShowProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    // SEGUE METHODS
 }

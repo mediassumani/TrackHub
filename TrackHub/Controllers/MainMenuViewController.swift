@@ -31,11 +31,11 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     // - MARK : UITableView Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return userProducts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.mainMenuCellIdentifier, for: indexPath) as! ProductCell
         let product = userProducts[indexPath.row]
         cell.productNameLabel.text = product.productName
         cell.productProfitLabel.text = product.getProductProfit().convertDoubleToString()
@@ -43,7 +43,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    
     // - MARK : SEGUE METHODS
+    
     
     /*
      This function prevents the navigation from VC's to cause memmory leaks

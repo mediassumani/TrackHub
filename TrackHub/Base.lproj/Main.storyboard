@@ -71,7 +71,7 @@
                                 <rect key="frame" x="0.0" y="103" width="375" height="626"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="100" id="jeH-1g-jk1" customClass="ProductCell" customModule="TrackHub" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="jeH-1g-jk1" customClass="ProductCell" customModule="TrackHub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jeH-1g-jk1" id="Dmf-JF-L3A">
@@ -153,7 +153,7 @@
                     <navigationItem key="navigationItem" title="My Products" id="HNK-H9-EgL" userLabel="TrackHub">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JgM-aU-PHU">
                             <connections>
-                                <segue destination="5go-08-VUy" kind="show" id="hOs-H8-cIR"/>
+                                <segue destination="5go-08-VUy" kind="show" identifier="addProduct" id="hOs-H8-cIR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -241,17 +241,21 @@
                     <navigationItem key="navigationItem" title="Title" id="1E2-JH-5xt">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hMG-rG-0fC">
                             <connections>
-                                <segue destination="Fxf-V4-QOr" kind="unwind" unwindAction="unwindWithSegue:" id="AeH-R2-48j"/>
+                                <segue destination="Fxf-V4-QOr" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="AeH-R2-48j"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RNQ-al-XRY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RNQ-al-XRY">
+                            <connections>
+                                <segue destination="Fxf-V4-QOr" kind="unwind" identifier="save" unwindAction="unwindWithSegue:" id="Jvt-jO-08w"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="amazonPriceLabel" destination="wBy-7Z-ig8" id="AbD-Ir-yqt"/>
                         <outlet property="productBrandLabel" destination="8ob-6w-9qz" id="1a2-L2-6fn"/>
                         <outlet property="productCategoryLabel" destination="tWg-1a-KiE" id="upL-kw-n1k"/>
                         <outlet property="productNameLabel" destination="snF-u1-BHe" id="nGX-3t-kNZ"/>
-                        <outlet property="prudoctSizeLabel" destination="62W-uO-CVH" id="7N8-ab-fao"/>
+                        <outlet property="productSizeLabel" destination="62W-uO-CVH" id="ggg-o4-1nv"/>
                         <outlet property="sellingPriceLabel" destination="5hp-K5-AxN" id="WCl-N5-mcl"/>
                         <outlet property="wholesalePriceLabel" destination="Sqq-Wd-0mp" id="6Dq-DP-Rfe"/>
                     </connections>
