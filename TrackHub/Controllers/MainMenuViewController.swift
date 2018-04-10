@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ProductDataSenderDelegate {
     // MARK: @IBOULETS
     
     @IBOutlet weak var tableView: UITableView!
@@ -29,10 +29,24 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.delegate = self
         tableView.separatorColor = UIColor.white
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let nav = segue.destination as? UINavigationController, let sendingVC = nav.topViewController as? ShowProductViewController{
+            sendingVC.delegate = self as? ProductDataSenderDelegate
+        }
+    }
+    
+    func sendData(_ productData: Product?) {
+        guard let unwrappedProductData = productData else {return}
+        self.userProducts.append(unwrappedProductData)
+    }
+    
 
     // MARK: UITableView Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return userProducts.count
     }
     
@@ -44,10 +58,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.productImage.image = UIImage(named: "noImage")
         return cell
     }
-    
-    
-    // - MARK : SEGUE METHODS
-    
+  
     
     /*
      This function prevents the navigation from VC's to cause memmory leaks
@@ -57,22 +68,4 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         // empty for now
     }
     
-}
-// extending the mainMenuVC to implement and use the data sent from protocol
-extension MainMenuViewController: ProductDataSenderDelegate{
-    
-    func sendData(productData: Product) {
-        
-        // adds the created product in the list of product
-       self.userProducts.append(productData)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "addProduct"{
-            let sendingViewController: ShowProductViewController = segue.destination as! ShowProductViewController
-                // sets the VC delegate as itself so it wont be nil...
-            sendingViewController.delegate = self
-        }
-    }
 }

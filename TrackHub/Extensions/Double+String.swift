@@ -16,7 +16,10 @@ extension Double{
 }
 
 extension String{
-    func convertSringToDouble() -> Double{
-        return Double(self)!
+    func convertSringToDouble(_ stringValue: String?) -> Double?{
+        guard let stringToBeDouble = stringValue else {
+            return nil
+        }
+        return Double(stringToBeDouble)
     }
 }
