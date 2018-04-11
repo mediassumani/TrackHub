@@ -11,15 +11,13 @@ import Foundation
 
 // MARK: Protocol
 protocol ProductDataSenderDelegate: class {
-    
-    func sendData(_ productData: Product?)
+    func sendData(_ controller: ShowProductViewController, productData: Product)
 }
 
 // MARK: CLASS
 class ShowProductViewController: UIViewController {
     
-    weak var delegate: ProductDataSenderDelegate?
-    
+    var delegate: ProductDataSenderDelegate?
     //MARK:  @IBOULETS
     @IBOutlet weak var productNameLabel: UITextField!
     @IBOutlet weak var productBrandLabel: UITextField!
@@ -29,32 +27,32 @@ class ShowProductViewController: UIViewController {
     @IBOutlet weak var sellingPriceLabel: UITextField!
     @IBOutlet weak var productCategoryLabel: UITextField!
     
-    var productData: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Safely Unwrapping the optionals iboulets
-        guard let name = productNameLabel.text, let brand = productBrandLabel.text, let size = productSizeLabel.text, let wholeSalePrice = wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text), let amazonPrice = amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text), let sellingPrice = sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text), let category = productCategoryLabel.text else {return}
+    }
+    
+    func createProductObject() -> Product{
+        
+        var productData = Product()
         
         // create a product data to be sent when protocol is conformed
-        productData?.productName = name
-        productData?.productBrand = brand
-        productData?.productSize = size
-        productData?.productWholesalePrice = wholeSalePrice
-        productData?.productProfit = (productData?.getProductProfit())!
-        productData?.ProductPriceOnAmazon = amazonPrice
-        productData?.sellingPrice = sellingPrice
-        productData?.productCategory = category
+        productData.productName = productNameLabel.text!
+        productData.productBrand = productBrandLabel.text!
+        productData.productSize = productSizeLabel.text!
+        productData.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
+        productData.productProfit = (productData.getProductProfit())
+        productData.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text)!)!
+        productData.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text)!)!
+        productData.productCategory = productCategoryLabel.text!
         
+        return productData
     }
             // If the user clicks on the save button...
     @IBAction func saveButtonIsTapped(_ sender: Any) {
-        
-            // sending the datato the VC that conforms the protocol
-        guard let myDelegate = self.delegate else {return}
-        myDelegate.sendData(productData)
-            //dismiss(animated: true, completion: nil
+        let data: Product = createProductObject()
+        print(data.productProfit)
     }
     
     

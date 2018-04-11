@@ -9,10 +9,18 @@
 import UIKit
 import Foundation
 
-class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ProductDataSenderDelegate {
+class MainMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     // MARK: @IBOULETS
     
     @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorColor = UIColor.white
+    
+    }
     
     // computed property - keeps track of all the client's products
     var userProducts = [Product](){
@@ -21,51 +29,24 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             tableView.reloadData()
         }
     }
-        
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.separatorColor = UIColor.white
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let nav = segue.destination as? UINavigationController, let sendingVC = nav.topViewController as? ShowProductViewController{
-            sendingVC.delegate = self as? ProductDataSenderDelegate
-        }
-    }
-    
-    func sendData(_ productData: Product?) {
-        guard let unwrappedProductData = productData else {return}
-        self.userProducts.append(unwrappedProductData)
-    }
+
     
 
     // MARK: UITableView Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return userProducts.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.mainMenuCellIdentifier, for: indexPath) as! ProductCell
-        let product = userProducts[indexPath.row]
-        cell.productNameLabel.text = product.productName
-        cell.productProfitLabel.text = product.getProductProfit().convertDoubleToString()
+        
+        //let product = userProducts[indexPath.row]
+        cell.productNameLabel.text = "productName"
+        cell.productProfitLabel.text = "$14"
         cell.productImage.image = UIImage(named: "noImage")
         return cell
     }
   
-    
-    /*
-     This function prevents the navigation from VC's to cause memmory leaks
-     - parameter segue : The segue to the destination VC
-     */
-    @IBAction func unwindWithSegue(_ segue : UIStoryboardSegue){
-        // empty for now
-    }
-    
 }
