@@ -17,9 +17,11 @@ protocol ProductDataSenderDelegate: class {
 // MARK: CLASS
 class ShowProductViewController: UIViewController {
     
+    // MARK: Class Properties
     var delegate: ProductDataSenderDelegate?
     var product: Product?
-    //MARK:  @IBOULETS
+    
+    // MARK:  @IBOULETS
     @IBOutlet weak var productNameLabel: UITextField!
     @IBOutlet weak var productBrandLabel: UITextField!
     @IBOutlet weak var productSizeLabel: UITextField!
@@ -28,7 +30,7 @@ class ShowProductViewController: UIViewController {
     @IBOutlet weak var sellingPriceLabel: UITextField!
     @IBOutlet weak var productCategoryLabel: UITextField!
     
-    
+    // MARK: VIEWCONTROLLERS METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = product?.productName
@@ -56,6 +58,7 @@ class ShowProductViewController: UIViewController {
         }
     }
     
+    // MARK: SEGUE FUNCTIONS
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let segueIdentifier = segue.identifier, let destination = segue.destination as? MainMenuViewController else {return}
@@ -84,25 +87,9 @@ class ShowProductViewController: UIViewController {
             product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
             product.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
             destination.userProducts.append(product)
+            delegate?.sendData(productData: product)
         default:
             print("Unexpected identifier")
         }
     }
-    /*
-            // If the user clicks on the save button...
-    @IBAction func saveButtonIsTapped(_ sender: UIBarButtonItem) {
-        let productData = createProductObject()
-        delegate?.sendData(productData: productData)
-        //print(productData.getProductProfit())
-        if let nav = self.navigationController {
-            nav.popViewController(animated: true)
-        }
-    }
-    
-    @IBAction func cancelButtonIsTapped(_ sender: UIBarButtonItem) {
-        if let nav = self.navigationController {
-            nav.popViewController(animated: true)
-        }
-    }
-    */
 }
