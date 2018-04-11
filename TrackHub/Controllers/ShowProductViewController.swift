@@ -11,13 +11,14 @@ import Foundation
 
 // MARK: Protocol
 protocol ProductDataSenderDelegate: class {
-    func sendData(_ controller: ShowProductViewController, productData: Product)
+    func sendData(productData: Product)
 }
 
 // MARK: CLASS
 class ShowProductViewController: UIViewController {
     
     var delegate: ProductDataSenderDelegate?
+    var product: Product?
     //MARK:  @IBOULETS
     @IBOutlet weak var productNameLabel: UITextField!
     @IBOutlet weak var productBrandLabel: UITextField!
@@ -30,29 +31,78 @@ class ShowProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = product?.productName
     }
     
-    func createProductObject() -> Product{
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        var productData = Product()
-        
-        // create a product data to be sent when protocol is conformed
-        productData.productName = productNameLabel.text!
-        productData.productBrand = productBrandLabel.text!
-        productData.productSize = productSizeLabel.text!
-        productData.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
-        productData.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text)!)!
-        productData.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text)!)!
-        productData.productCategory = productCategoryLabel.text!
-        
-        return productData
-    }
-            // If the user clicks on the save button...
-    @IBAction func saveButtonIsTapped(_ sender: Any) {
-        if let data: Product = createProductObject(){
-            delegate?.sendData(self, productData: data)
+        if let product = product{
+            productNameLabel.text = product.productName
+            productBrandLabel.text = product.productBrand
+            productSizeLabel.text = product.productSize
+            productCategoryLabel.text = product.productCategory
+            wholesalePriceLabel.text = product.productWholeSalePrice.convertDoubleToString()
+            amazonPriceLabel.text = product.ProductPriceOnAmazon.convertDoubleToString()
+            sellingPriceLabel.text = product.sellingPrice.convertDoubleToString()
+        }else{
+            productNameLabel.text = ""
+            productCategoryLabel.text = ""
+            productSizeLabel.text = ""
+            productBrandLabel.text = ""
+            wholesalePriceLabel.text = ""
+            amazonPriceLabel.text = ""
+            sellingPriceLabel.text = ""
         }
-        
     }
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier, let destination = segue.destination as? MainMenuViewController else {return}
+        switch segueIdentifier {
+        
+        // SAFELY UNWRAP THEM MEDI !!!
+        case "save" where product != nil:
+            product?.productName = productNameLabel.text ?? ""
+            product?.productBrand = productBrandLabel.text ?? ""
+            product?.productSize = productSizeLabel.text ?? ""
+            product?.productCategory = productCategoryLabel.text ?? ""
+            product?.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
+            product?.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
+            product?.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
+            
+            destination.tableView.reloadData()
+            
+        case "save" where product == nil:
+            
+            let product = Product()
+            product.productName = productNameLabel.text!
+            product.productBrand = productBrandLabel.text!
+            product.productSize = productSizeLabel.text!
+            product.productCategory = productCategoryLabel.text!
+            product.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
+            product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
+            product.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
+            destination.userProducts.append(product)
+        default:
+            print("Unexpected identifier")
+        }
+    }
+    /*
+            // If the user clicks on the save button...
+    @IBAction func saveButtonIsTapped(_ sender: UIBarButtonItem) {
+        let productData = createProductObject()
+        delegate?.sendData(productData: productData)
+        //print(productData.getProductProfit())
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        }
+    }
+    
+    @IBAction func cancelButtonIsTapped(_ sender: UIBarButtonItem) {
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        }
+    }
+    */
 }

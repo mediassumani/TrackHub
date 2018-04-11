@@ -136,6 +136,7 @@
                                             <outlet property="productImage" destination="Dt9-Pf-keK" id="s26-xM-r4w"/>
                                             <outlet property="productNameLabel" destination="FFK-ja-OOk" id="vf2-Q3-Um5"/>
                                             <outlet property="productProfitLabel" destination="eQT-Th-Nlr" id="51z-10-qSu"/>
+                                            <segue destination="5go-08-VUy" kind="show" identifier="showProduct" id="vzD-7M-4vR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -153,6 +154,7 @@
                     <navigationItem key="navigationItem" title="My Products" id="HNK-H9-EgL" userLabel="TrackHub">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JgM-aU-PHU">
                             <connections>
+                                <action selector="addProductButtonIsTapped:" destination="sgi-XH-KSa" id="id5-77-WNM"/>
                                 <segue destination="5go-08-VUy" kind="show" identifier="addProduct" id="hOs-H8-cIR"/>
                             </connections>
                         </barButtonItem>
@@ -168,7 +170,7 @@
         <!--Title-->
         <scene sceneID="EIn-Zb-UT5">
             <objects>
-                <viewController id="5go-08-VUy" customClass="ShowProductViewController" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SendingVC" id="5go-08-VUy" customClass="ShowProductViewController" customModule="TrackHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lCQ-Av-ZD1" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,10 +241,16 @@
                         <viewLayoutGuide key="safeArea" id="Ngh-La-R0t"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="1E2-JH-5xt">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hMG-rG-0fC"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hMG-rG-0fC">
+                            <connections>
+                                <action selector="cancelButtonIsTapped:" destination="5go-08-VUy" id="giZ-iQ-IW3"/>
+                                <segue destination="MW7-rf-bG1" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="4ha-Pg-vk4"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="RNQ-al-XRY">
                             <connections>
                                 <action selector="saveButtonIsTapped:" destination="5go-08-VUy" id="lks-OZ-2ZJ"/>
+                                <segue destination="MW7-rf-bG1" kind="unwind" identifier="save" unwindAction="unwindWithSegue:" id="NBI-TG-MlP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -257,6 +265,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szq-K4-o6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MW7-rf-bG1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-23" y="-262"/>
         </scene>
@@ -321,4 +330,7 @@
         <image name="money" width="25" height="25"/>
         <image name="yellowShirt" width="100" height="133"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hOs-H8-cIR"/>
+    </inferredMetricsTieBreakers>
 </document>
