@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrackHub/Controllers/ShowProductViewController.swift"
-            timestampString = "545106940.0465159"
+            timestampString = "545149234.6056319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "saveButtonIsTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>

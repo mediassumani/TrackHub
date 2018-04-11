@@ -42,7 +42,6 @@ class ShowProductViewController: UIViewController {
         productData.productBrand = productBrandLabel.text!
         productData.productSize = productSizeLabel.text!
         productData.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
-        productData.productProfit = (productData.getProductProfit())
         productData.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text)!)!
         productData.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text)!)!
         productData.productCategory = productCategoryLabel.text!
@@ -51,9 +50,9 @@ class ShowProductViewController: UIViewController {
     }
             // If the user clicks on the save button...
     @IBAction func saveButtonIsTapped(_ sender: Any) {
-        let data: Product = createProductObject()
-        print(data.productProfit)
+        if let data: Product = createProductObject(){
+            delegate?.sendData(self, productData: data)
+        }
+        
     }
-    
-    
 }

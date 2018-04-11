@@ -34,6 +34,10 @@ public class Product{
         return sellingPrice - productWholeSalePrice
     }
     
+    static public func getTotalInvestement() -> Double{
+        return totalInvestment
+    }
+    
 }
 
 

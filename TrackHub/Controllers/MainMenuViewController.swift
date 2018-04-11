@@ -48,5 +48,9 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.productImage.image = UIImage(named: "noImage")
         return cell
     }
+    
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue){
+        // empty for now
+    }
   
 }
