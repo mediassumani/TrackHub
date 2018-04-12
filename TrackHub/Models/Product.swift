@@ -30,11 +30,11 @@ public class Product{
        Product.totalInvestment += sellingPrice
     }
     // Instance Method - returns the profit made off the merchandise
-    public func getProductProfit() -> Double{
+    internal func getProductProfit() -> Double{
         return sellingPrice - productWholeSalePrice
     }
     
-    static public func getTotalInvestement() -> Double{
+    static internal func getTotalInvestement() -> Double{
         return totalInvestment
     }
     
