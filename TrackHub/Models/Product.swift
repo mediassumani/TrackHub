@@ -18,7 +18,6 @@ public class Product{
     var productBrand: String = ""
     var productSize : String = "" // size can be set as XL, L, M, S
     var productWholeSalePrice: Double = 0.0
-    var productProfit: Double = 0.0
     var ProductPriceOnAmazon: Double = 0.0
     var sellingPrice: Double = 0.0
     var productCategory: String = ""
@@ -34,7 +33,7 @@ public class Product{
         return sellingPrice - productWholeSalePrice
     }
     
-    static internal func getTotalInvestement() -> Double{
+    static func getTotalInvestement() -> Double{
         return totalInvestment
     }
     
