@@ -9,16 +9,10 @@
 import UIKit
 import Foundation
 
-// MARK: Protocol
-protocol ProductDataSenderDelegate: class {
-    func sendData(productData: Product)
-}
-
 // MARK: CLASS
 class ShowProductViewController: UIViewController {
     
     // MARK: Class Properties
-    var delegate: ProductDataSenderDelegate?
     var product: Product?
     
     // MARK:  @IBOULETS
@@ -87,7 +81,6 @@ class ShowProductViewController: UIViewController {
             product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
             product.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
             destination.userProducts.append(product)
-            delegate?.sendData(productData: product)
         default:
             print("Unexpected identifier")
         }
