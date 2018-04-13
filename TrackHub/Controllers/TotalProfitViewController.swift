@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TotalProfitViewController: UIViewController, ProductDataSenderDelegate {
+public class TotalProfitViewController: UIViewController{
 
     // - MARK : @IBOULETS
     
@@ -20,16 +20,6 @@ public class TotalProfitViewController: UIViewController, ProductDataSenderDeleg
         super.viewDidLoad()
         TimeHelper.singleton.displayGreeting(greetingTextView: greetingView)
         // Do any additional setup after loading the view.
-    }
-    
-    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let nav = segue.destination as? UINavigationController, let sendingVC = nav.topViewController as? ShowProductViewController  {
-            sendingVC.delegate = self
-        }
-    }
-
-    func sendData(productData: Product) {
-        self.profitAmountLabel.text = productData.getProductProfit().convertDoubleToString()
     }
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

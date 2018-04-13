@@ -26,8 +26,6 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.separatorColor = UIColor.white
     }
     
-
-
     // MARK:  DATA SOURCE METHODS
     
             // Function to keep track of the amount of cells in the main menu
@@ -72,7 +70,6 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             print("Unverified identifier")
         }
     }
-    
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue){
         // empty for now
