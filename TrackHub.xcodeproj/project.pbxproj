@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		670A7E2E206EBE8200C65AEA /* ShowProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A7E2D206EBE8200C65AEA /* ShowProductViewController.swift */; };
 		670A7E33206EC6DE00C65AEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A7E32206EC6DE00C65AEA /* Constants.swift */; };
+		671F81DA2080FDE2002077DA /* ProfitAndInvestementDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671F81D92080FDE2002077DA /* ProfitAndInvestementDelegate.swift */; };
 		6736FA9F206F077800A21A13 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736FA9E206F077800A21A13 /* ProductCell.swift */; };
 		6736FAA12071678B00A21A13 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736FAA02071678B00A21A13 /* ProductService.swift */; };
 		6736FAA3207167BF00A21A13 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736FAA2207167BF00A21A13 /* Product.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		670A7E2D206EBE8200C65AEA /* ShowProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowProductViewController.swift; sourceTree = "<group>"; };
 		670A7E32206EC6DE00C65AEA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		671F81D92080FDE2002077DA /* ProfitAndInvestementDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitAndInvestementDelegate.swift; sourceTree = "<group>"; };
 		6736FA9E206F077800A21A13 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		6736FAA02071678B00A21A13 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		6736FAA2207167BF00A21A13 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		671F81D82080FD6C002077DA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				671F81D92080FDE2002077DA /* ProfitAndInvestementDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		67681E06206943B30030F0B1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		67681E11206943B30030F0B1 /* TrackHub */ = {
 			isa = PBXGroup;
 			children = (
+				671F81D82080FD6C002077DA /* Protocol */,
 				670A7E31206EC6CF00C65AEA /* Helpers */,
 				67681E2C206944FD0030F0B1 /* Coredata */,
 				67681E2B206944ED0030F0B1 /* Extensions */,
@@ -237,6 +248,7 @@
 				676D70EA207355B100E8217F /* ProductCategory.swift in Sources */,
 				67681E3220699F380030F0B1 /* TotalInvestmentMade.swift in Sources */,
 				67AA5D622076E2BE00676FC2 /* Double+String.swift in Sources */,
+				671F81DA2080FDE2002077DA /* ProfitAndInvestementDelegate.swift in Sources */,
 				670A7E33206EC6DE00C65AEA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
