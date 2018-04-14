@@ -1,5 +1,5 @@
 //
-//  Double+String.swift
+//  Double+String+Extension.swift
 //  TrackHub
 //
 //  Created by Assumani, Medi on 4/5/18.

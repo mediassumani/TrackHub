@@ -9,7 +9,6 @@
 import UIKit
 import Foundation
 
-// MARK: CLASS
 class ShowProductViewController: UIViewController {
     
     // MARK: Class Properties
@@ -24,7 +23,7 @@ class ShowProductViewController: UIViewController {
     @IBOutlet weak var sellingPriceLabel: UITextField!
     @IBOutlet weak var productCategoryLabel: UITextField!
     
-    // MARK: VIEWCONTROLLERS METHODS
+    // MARK: VIEWCONTROLLERS LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = product?.productName
