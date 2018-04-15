@@ -79,6 +79,7 @@ class ShowProductViewController: UIViewController {
             product.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
             product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
             product.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
+            product.setProductProfit(product.getProductProfit())
             destination.userProducts.append(product)
         default:
             print("Unexpected identifier")

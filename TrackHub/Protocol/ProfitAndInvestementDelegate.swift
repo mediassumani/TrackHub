@@ -12,6 +12,6 @@ import Foundation
  
  */
 @objc protocol ProfitAndInvestementDelegate: class{
-    @objc optional func sendTotalProfitData(totalprofit: Double) //  passes the total investment of all products
-    @objc optional func sendTotalInvestmentData(totalInvenstement: Double) //  passes the total profit of all products
+    @objc optional func sendTotalProfitData(_ totalprofit: Double) //  passes the total investment of all products
+    @objc optional func sendTotalInvestmentData(_ totalInvenstement: Double) //  passes the total profit of all products
 }

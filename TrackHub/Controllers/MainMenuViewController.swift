@@ -33,8 +33,7 @@ class MainMenuViewController: UIViewController{
         tableView.dataSource = self
         tableView.separatorColor = UIColor.white
     }
-    
-    
+
     // MARK: SEGUES METHODS
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {return}

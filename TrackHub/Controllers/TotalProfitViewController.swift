@@ -19,11 +19,8 @@ public class TotalProfitViewController: UIViewController{
     override public func viewDidLoad() {
         super.viewDidLoad()
         TimeHelper.singleton.displayGreeting(greetingTextView: greetingView)
+        profitAmountLabel.text = "$" + Product.getTotalProfitOfAllProducts().convertDoubleToString()
         // Do any additional setup after loading the view.
-    }
-    override public func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
