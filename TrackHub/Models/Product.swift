@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import UIKit
 
 public final class Product{
     // single property to keep track of the total amount invested and total profit
-    static var totalInvestment: Double = 0.0
-    static var totalProfit = [Double]()
+    static public var totalInvestment: Double = 0.0
+    static public var totalProfit: Double = 0.0
     
     // Stored propertis
     var productName: String = ""
@@ -23,31 +22,15 @@ public final class Product{
     var sellingPrice: Double = 0.0
     var productCategory: String = ""
     
-    // Custom initializer - doesn't take any parameter
-    
-    init() {
-        
-    }
-    
+    // Instance Method - This function sets the current total profit after the stored variables have been initialized
     func setProductProfit(_ profit: Double){
-        Product.totalProfit.append(profit)
+        Product.totalProfit  += profit
     }
-    // Instance Method - returns the profit made off the merchandise
+    
+    // Instance Method - returns the profit made off a specific merchandise
     internal func getProductProfit() -> Double{
         return sellingPrice - productWholeSalePrice
     }
-    static func getTotalProfitOfAllProducts() ->Double{
-        var totalProfit = 0.0
-        for profit in Product.totalProfit {
-            totalProfit +=  profit
-        }
-        return totalProfit
-    }
-    
-    static func getTotalInvestement() -> Double{
-        return totalInvestment
-    }
-    
 }
 
 

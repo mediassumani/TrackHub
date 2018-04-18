@@ -19,8 +19,10 @@ public class TotalProfitViewController: UIViewController{
     override public func viewDidLoad() {
         super.viewDidLoad()
         TimeHelper.singleton.displayGreeting(greetingTextView: greetingView)
-        profitAmountLabel.text = "$" + Product.getTotalProfitOfAllProducts().convertDoubleToString()
-        // Do any additional setup after loading the view.
+    }
+    
+    override public func viewWillAppear(_ animated: Bool) {
+        profitAmountLabel.text = "$" + Product.totalProfit.convertDoubleToString()
     }
 
 }
