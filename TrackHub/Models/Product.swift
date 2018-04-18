@@ -27,9 +27,19 @@ public final class Product{
         Product.totalProfit  += profit
     }
     
+    // Instance Method - This function sets the current total money invested in the specific merchandise
+    func setProductInvestment(_ investement: Double){
+        Product.totalInvestment += investement
+    }
+    
     // Instance Method - returns the profit made off a specific merchandise
     internal func getProductProfit() -> Double{
         return sellingPrice - productWholeSalePrice
+    }
+    
+    // Instance Method - returns the invested money on the merchandise
+    internal func getProductInvestementAmount() -> Double{
+        return self.productWholeSalePrice
     }
 }
 
