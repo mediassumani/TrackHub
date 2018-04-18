@@ -31,19 +31,19 @@ public class TimeHelper{
     }
     
     fileprivate func timeIsMorning(textView: UITextView){
-        textView.text = "Good Morning"
+        textView.text = "Good Morning Ms. Ambroise"
     }
     
     fileprivate func timeIsAfteroon(textView: UITextView){
-        textView.text = "Good Afternoon"
+        textView.text = "Good Afternoon Ms. Ambroise"
     }
     
     fileprivate func timeIsEvening(textView: UITextView){
-        textView.text = "Good Evening"
+        textView.text = "Good Evening Ms. Ambroise"
     }
     
     fileprivate func timeIsNight(textView: UITextView){
-        textView.text = "Good Night"
+        textView.text = "Good Night Ms. Ambroise"
     }
 }
 
