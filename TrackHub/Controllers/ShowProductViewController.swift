@@ -27,6 +27,9 @@ class ShowProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = product?.productName
+        
+        // TEXTFIELDS DELEGATES
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +83,7 @@ class ShowProductViewController: UIViewController {
             product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
             product.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
             product.setProductProfit(product.getProductProfit())
+            product.setProductInvestment(product.productWholeSalePrice)
             destination.userProducts.append(product)
         default:
             print("Unexpected identifier")

@@ -14,7 +14,6 @@ public class TotalProfitViewController: UIViewController{
     
     @IBOutlet weak var greetingView: UITextView!
     @IBOutlet weak var profitAmountLabel: UILabel!
-    @IBOutlet weak var totalAmoutOfItmesLabel: UILabel!
     
     // - VIEW CONTROLLER METHODS
     override public func viewDidLoad() {
@@ -27,7 +26,6 @@ public class TotalProfitViewController: UIViewController{
     }
     
     override public func viewWillAppear(_ animated: Bool) {
-        totalAmoutOfItmesLabel.text = "Projected Profit :"
         profitAmountLabel.text = "$" + Product.totalProfit.convertDoubleToString()
     }
 

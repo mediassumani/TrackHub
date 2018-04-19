@@ -30,13 +30,11 @@ class ProductCell: UITableViewCell {
         image.layer.cornerRadius = image.frame.size.width / 2
         image.clipsToBounds = true
         name.textColor = UIColor.black
-        profit.textColor = UIColor.green
-   
+        profit.textColor = UIColor.red
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
-
+ 
 }

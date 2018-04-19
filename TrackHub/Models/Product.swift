@@ -10,8 +10,8 @@ import Foundation
 
 public final class Product{
     // single property to keep track of the total amount invested and total profit
-    static public var totalInvestment: Double = 0.0
-    static public var totalProfit: Double = 0.0
+    static public var totalInvestment = 0.0
+    static public var totalProfit = 0.0
     
     // Stored propertis
     var productName: String = ""
