@@ -46,4 +46,9 @@ struct CoreDataHelper{
         saveProduct()
     }
     
+    // Funxtion to fetch/grab all of the client's products and return them in an Array
+    static func fetchAllProduct() -> [Product]{
+        return []
+    }
+    
 }
