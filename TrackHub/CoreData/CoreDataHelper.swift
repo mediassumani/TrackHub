@@ -21,11 +21,29 @@ struct CoreDataHelper{
         return context
     }()
     
-    // IMPORTANT METHODS
+                    // IMPORTANT METHODS
     
         // Function to craete a new product instance and insert it into the coreData store
     static func createNewProduct() -> Product{
         let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: objectContext)
         return newProduct
     }
+    
+        // Function to save a product instance into the coredata store
+    static func saveProduct(){
+        do{
+            try objectContext.save()
+        }catch let error{
+            print(error.localizedDescription)
+        }
+    }
+    
+        /* Funtion to delete a product instance from the coredata store
+        param - productToBeDeleted : an instance of type Product to be removed from the list of client's products
+        */
+    static func deleteProduct(_ productToBeDeleted: Product){
+        objectContext.delete(productToBeDeleted)
+        saveProduct()
+    }
+    
 }
