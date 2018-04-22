@@ -6,14 +6,20 @@
 //  Copyright © 2018 Assumani, Medi. All rights reserved.
 //
 
-import Foundation
+import CoreData
 import UIKit
 
 struct CoreDataHelper{
-    static let managedObjejctContext: NSManagedObjectContext = {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+    static let objectContext: NSManagedObjectContext = {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             fatalError()
         }
+            // Getting the persitant container property from the AppDelegate file
+        let persistantConatainer = appDelegate.persistentContainer
+        let context = persistantConatainer.viewContext
         
+        return context
     }()
+    
+    // IMPORTANT METHODS
 }
