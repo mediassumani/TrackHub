@@ -7,10 +7,13 @@
 //
 
 import Foundation
-import CoreData
+import UIKit
 
 struct CoreDataHelper{
     static let managedObjejctContext: NSManagedObjectContext = {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            fatalError()
+        }
         
     }()
 }
