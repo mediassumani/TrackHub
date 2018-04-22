@@ -22,4 +22,10 @@ struct CoreDataHelper{
     }()
     
     // IMPORTANT METHODS
+    
+        // Function to craete a new product instance and insert it into the coreData store
+    static func createNewProduct() -> Product{
+        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: objectContext)
+        return newProduct
+    }
 }
