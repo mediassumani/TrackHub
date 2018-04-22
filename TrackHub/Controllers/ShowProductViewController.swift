@@ -55,9 +55,9 @@ class ShowProductViewController: UIViewController {
     
     fileprivate func setProductImage(_ product: Product) -> UIImage{
         
-        guard let productCategory = self.productCategoryLabel.text, var productImage = product.productImage else {return product.productImage}
+        guard let productCategory = self.productCategoryLabel.text, var productImage = product.productImage else {return product.productImage!}
         
-        
+                // Assigning the correct image to the product
         switch productCategory{
         case "long Dress":
             productImage = UIImage(named: "longDress")!

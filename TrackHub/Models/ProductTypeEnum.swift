@@ -8,11 +8,9 @@
 
 import Foundation
 
-public enum ProductCategory{
-    case tShirt
-    case ladyTop
-    case vintageClothing
-    case sandal
-    case pant
-    case dress
+public enum ProductTypeEnum{
+    case longDress
+    case shortDress
+    case sandals
+    case pants
 }
