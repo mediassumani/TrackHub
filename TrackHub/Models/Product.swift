@@ -22,7 +22,7 @@ public final class Product{
     var ProductPriceOnAmazon: Double = 0.0
     var sellingPrice: Double = 0.0
     var productCategory: String = ""
-    var productImage: UIImage? 
+    var productImage: UIImage?
     
     // Instance Method - This function sets the current total profit after the stored variables have been initialized
     func setProductProfit(_ profit: Double){

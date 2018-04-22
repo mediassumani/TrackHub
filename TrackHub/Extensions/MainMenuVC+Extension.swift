@@ -24,7 +24,7 @@ extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate{
         let product = userProducts[indexPath.row]
         cell.productNameLabel.text = product.productName
         cell.productProfitLabel.text = "$" + product.getProductProfit().convertDoubleToString()
-        cell.productImage.image = UIImage(named: "noImage")
+        cell.productImage.image = product.productImage
         return cell
     }
     

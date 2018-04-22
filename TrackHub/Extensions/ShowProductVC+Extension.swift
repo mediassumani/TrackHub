@@ -38,6 +38,7 @@ extension ShowProductViewController{
             product.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
             product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
             product.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
+            product.productImage = setProductImage(product)
             product.setProductProfit(product.getProductProfit())
             product.setProductInvestment(product.productWholeSalePrice)
             destination.userProducts.append(product)

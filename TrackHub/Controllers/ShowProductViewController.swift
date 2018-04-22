@@ -13,7 +13,7 @@ class ShowProductViewController: UIViewController {
     
     // MARK: Class Properties
     var product: Product?
-    let listOfPruductCategories: [String] = ["Long Dress","Short Dress","Sandal","Pant"]
+    let listOfPruductCategories: [String] = ["Long Dress","Short Dress","Sandal","Pant","Lady Top"]
     var pickerView = UIPickerView() // will hold all the product category choices
     
     // MARK:  @IBOULETS
@@ -32,13 +32,14 @@ class ShowProductViewController: UIViewController {
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         productCategoryLabel.inputView = pickerView
-        self.productNameLabel.delegate = self as? UITextFieldDelegate
-        self.productSizeLabel.delegate = self as? UITextFieldDelegate
-        self.productCategoryLabel.delegate = self as? UITextFieldDelegate
-        self.productBrandLabel.delegate = self as? UITextFieldDelegate
-        self.wholesalePriceLabel.delegate = self as? UITextFieldDelegate
-        self.amazonPriceLabel.delegate = self as? UITextFieldDelegate
-        self.sellingPriceLabel.delegate = self as? UITextFieldDelegate
+        self.productNameLabel.delegate = self as UITextFieldDelegate
+        self.productSizeLabel.delegate = self as UITextFieldDelegate
+        self.productCategoryLabel.delegate = self as UITextFieldDelegate
+        self.productBrandLabel.delegate = self as UITextFieldDelegate
+        self.wholesalePriceLabel.delegate = self as UITextFieldDelegate
+        self.amazonPriceLabel.delegate = self as UITextFieldDelegate
+        self.sellingPriceLabel.delegate = self as UITextFieldDelegate
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,30 +65,36 @@ class ShowProductViewController: UIViewController {
     }
     
     // MARK: CLASS METHODS
-    
-    fileprivate func setProductImage(_ product: Product) -> UIImage{
+
+    internal func setProductImage(_ product: Product) -> UIImage{
         
-        guard let productCategory = self.productCategoryLabel.text, var productImage = product.productImage else {return product.productImage!}
         
+        var productImage: UIImage?
                 // Assigning the correct image to the product
-        switch productCategory{
-        case "long Dress":
-            productImage = UIImage(named: "longDress")!
-            
-        case "Short Dress":
-            productImage = UIImage(named: "shortDress")!
-            
-        case "Sandals":
-            productImage = UIImage(named: "sandals")!
-            
-        case "Pants":
-            productImage = UIImage(named: "pants")!
-            
-        default:
-            print("Invalid Choice")
-        }
+        let pickerValue = listOfPruductCategories[pickerView.selectedRow(inComponent: 0)]
         
-        return productImage
+            if pickerValue == "Long Dress"{
+                
+                productImage = UIImage(named: "longDress")
+                
+            }else if pickerValue == "Short Dress"{
+                
+                productImage = UIImage(named: "shortDress")
+                
+            }else if pickerValue == "Pant" {
+                
+                productImage = UIImage(named: "pants")
+                
+            }else if pickerValue == "Sandal" {
+                
+                productImage = UIImage(named: "sandals")
+                
+            } else if pickerValue == "Lady Top"{
+                productImage = UIImage(named: "ladyTop")
+            }else{
+                productImage = UIImage(named: "noImage")
+            }
+        return productImage!
     }
-    
+
 }
