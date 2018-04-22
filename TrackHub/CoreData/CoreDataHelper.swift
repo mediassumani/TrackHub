@@ -8,3 +8,9 @@
 
 import Foundation
 import CoreData
+
+struct CoreDataHelper{
+    static let managedObjejctContext: NSManagedObjectContext = {
+        
+    }()
+}
