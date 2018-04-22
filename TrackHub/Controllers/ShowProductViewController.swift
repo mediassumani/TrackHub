@@ -27,9 +27,6 @@ class ShowProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = product?.productName
-        
-        // TEXTFIELDS DELEGATES
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,39 +51,31 @@ class ShowProductViewController: UIViewController {
         }
     }
     
-    // MARK: SEGUE FUNCTIONS
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let segueIdentifier = segue.identifier, let destination = segue.destination as? MainMenuViewController else {return}
-        switch segueIdentifier {
+    // MARK: CLASS METHODS
+    
+    fileprivate func setProductImage(_ product: Product) -> UIImage{
         
-        // SAFELY UNWRAP THEM MEDI !!!
-        case "save" where product != nil:
-            product?.productName = productNameLabel.text ?? ""
-            product?.productBrand = productBrandLabel.text ?? ""
-            product?.productSize = productSizeLabel.text ?? ""
-            product?.productCategory = productCategoryLabel.text ?? ""
-            product?.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
-            product?.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
-            product?.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
+        guard let productCategory = self.productCategoryLabel.text, var productImage = product.productImage else {return product.productImage}
+        
+        
+        switch productCategory{
+        case "long Dress":
+            productImage = UIImage(named: "longDress")!
             
-            destination.tableView.reloadData()
+        case "Short Dress":
+            productImage = UIImage(named: "shortDress")!
             
-        case "save" where product == nil:
+        case "Sandals":
+            productImage = UIImage(named: "sandals")!
             
-            let product = Product()
-            product.productName = productNameLabel.text!
-            product.productBrand = productBrandLabel.text!
-            product.productSize = productSizeLabel.text!
-            product.productCategory = productCategoryLabel.text!
-            product.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
-            product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
-            product.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
-            product.setProductProfit(product.getProductProfit())
-            product.setProductInvestment(product.productWholeSalePrice)
-            destination.userProducts.append(product)
+        case "Pants":
+            productImage = UIImage(named: "pants")!
+            
         default:
-            print("Unexpected identifier")
+            print("Invalid Choice")
         }
+        
+        return productImage
     }
+    
 }

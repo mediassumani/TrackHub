@@ -11,8 +11,7 @@ import UIKit
 
 extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate{
     
-    
-    // MARK:  DATA SOURCE METHODS
+            // MARK:  DATA SOURCE METHODS
     
     // Function to keep track of the amount of cells in the main menu
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

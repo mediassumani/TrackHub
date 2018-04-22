@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "yellowShirt.jpg",
+      "filename" : "short dress.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "yellowShirt-1.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "yellowShirt-2.jpg",
       "scale" : "3x"
     }
   ],
