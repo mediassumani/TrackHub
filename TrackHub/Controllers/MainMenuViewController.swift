@@ -14,6 +14,7 @@ class MainMenuViewController: UIViewController{
     // MARK: @IBOULETS And Properties
     
     @IBOutlet weak var tableView: UITableView!
+    var pickerView = UIPickerView() // will hold all the product category choices
     var userProducts = [Product]() {
         didSet {
             tableView.reloadData()

@@ -13,4 +13,5 @@ struct Constants{
     
     static let mainMenuCellIdentifier : String = "productCell"
     static let cellSpacingHeight: CGFloat = 5
+    static let amountOfProductCategories: Int = 4
 }
