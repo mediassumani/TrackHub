@@ -15,8 +15,6 @@ class MainMenuViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: PROPERTIES
-    let listOfPruductCategories: [String] = ["Long Dress","Short Dress","Sandal","Pant"]
-    var pickerView = UIPickerView() // will hold all the product category choices
     
     var userProducts = [Product]() {
         didSet {

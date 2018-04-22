@@ -13,6 +13,8 @@ class ShowProductViewController: UIViewController {
     
     // MARK: Class Properties
     var product: Product?
+    let listOfPruductCategories: [String] = ["Long Dress","Short Dress","Sandal","Pant"]
+    var pickerView = UIPickerView() // will hold all the product category choices
     
     // MARK:  @IBOULETS
     @IBOutlet weak var productNameLabel: UITextField!
@@ -27,6 +29,9 @@ class ShowProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = product?.productName
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
+        productCategoryLabel.inputView = pickerView
     }
     
     override func viewWillAppear(_ animated: Bool) {
