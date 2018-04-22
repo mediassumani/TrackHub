@@ -11,9 +11,7 @@ import UIKit
 
 extension ShowProductViewController{
     
-    
     // MARK: SEGUE FUNCTIONS
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let segueIdentifier = segue.identifier, let destination = segue.destination as? MainMenuViewController else {return}
         switch segueIdentifier {
@@ -49,6 +47,8 @@ extension ShowProductViewController{
     }
 }
 
+            // SETTING UP THE PRODUCT CATEGORY PICKER CHOICE
+
 extension ShowProductViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     
     // returns the number of 'columns' to display.
@@ -70,6 +70,35 @@ extension ShowProductViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         
     }
     
+}
+        // SETTING UP THE TEXTFIELDS IN THE VC
+extension ShowProductViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+            
+        case productNameLabel:
+            productBrandLabel.becomeFirstResponder()
+            
+        case productBrandLabel:
+            productSizeLabel.becomeFirstResponder()
+            
+        case productSizeLabel:
+            wholesalePriceLabel.becomeFirstResponder()
+            
+        case wholesalePriceLabel:
+            amazonPriceLabel.becomeFirstResponder()
+            
+        case amazonPriceLabel:
+            sellingPriceLabel.becomeFirstResponder()
+            
+        case sellingPriceLabel:
+            productCategoryLabel.becomeFirstResponder()
+            
+        default:
+            productCategoryLabel.resignFirstResponder()
+        }
+        return true
+    }
 }
 
 

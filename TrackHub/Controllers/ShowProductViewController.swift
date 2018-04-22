@@ -39,7 +39,6 @@ class ShowProductViewController: UIViewController {
         self.wholesalePriceLabel.delegate = self as? UITextFieldDelegate
         self.amazonPriceLabel.delegate = self as? UITextFieldDelegate
         self.sellingPriceLabel.delegate = self as? UITextFieldDelegate
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
