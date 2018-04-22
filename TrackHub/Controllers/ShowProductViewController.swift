@@ -32,6 +32,14 @@ class ShowProductViewController: UIViewController {
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         productCategoryLabel.inputView = pickerView
+        self.productNameLabel.delegate = self as? UITextFieldDelegate
+        self.productSizeLabel.delegate = self as? UITextFieldDelegate
+        self.productCategoryLabel.delegate = self as? UITextFieldDelegate
+        self.productBrandLabel.delegate = self as? UITextFieldDelegate
+        self.wholesalePriceLabel.delegate = self as? UITextFieldDelegate
+        self.amazonPriceLabel.delegate = self as? UITextFieldDelegate
+        self.sellingPriceLabel.delegate = self as? UITextFieldDelegate
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
