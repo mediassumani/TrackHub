@@ -21,44 +21,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-aE-7DD" userLabel="subView">
                                 <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="     Good Morning (name)    You've made a total profit of :" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-Yw-346" userLabel="greetingView">
-                                        <rect key="frame" x="49" y="89" width="290" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="igc-Da-zZ6"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-yU-dZ4" userLabel="profitAmountLabel">
-                                        <rect key="frame" x="58" y="264" width="240" height="86"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="86" id="R8D-Ky-xn7"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-yU-dZ4" userLabel="profitAmountLabel">
+                                        <rect key="frame" x="96" y="282" width="136" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Profit Made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq5-jA-aFd" userLabel="profitText">
-                                        <rect key="frame" x="60" y="20" width="255" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Profit Made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq5-jA-aFd" userLabel="profitText">
+                                        <rect key="frame" x="70" y="69" width="231" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="fq5-jA-aFd" firstAttribute="leading" secondItem="QNd-aE-7DD" secondAttribute="leading" constant="60" id="796-CP-uUm"/>
-                                    <constraint firstAttribute="trailing" secondItem="fq5-jA-aFd" secondAttribute="trailing" constant="60" id="81n-eM-AQu"/>
-                                    <constraint firstItem="QQV-Yw-346" firstAttribute="top" secondItem="fq5-jA-aFd" secondAttribute="bottom" constant="40" id="91E-U4-k54"/>
-                                    <constraint firstAttribute="trailing" secondItem="QQV-Yw-346" secondAttribute="trailing" constant="36" id="DvR-FJ-CDR"/>
-                                    <constraint firstItem="QQV-Yw-346" firstAttribute="leading" secondItem="QNd-aE-7DD" secondAttribute="leading" constant="49" id="GNr-hl-j1D"/>
-                                    <constraint firstItem="Ioe-yU-dZ4" firstAttribute="leading" secondItem="QNd-aE-7DD" secondAttribute="leading" constant="58" id="JWd-4Y-owM"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ioe-yU-dZ4" secondAttribute="trailing" constant="77" id="K0f-fz-Owo"/>
-                                    <constraint firstItem="Ioe-yU-dZ4" firstAttribute="top" secondItem="QQV-Yw-346" secondAttribute="bottom" constant="47" id="t4Z-Vb-w4A"/>
-                                    <constraint firstItem="fq5-jA-aFd" firstAttribute="top" secondItem="QNd-aE-7DD" secondAttribute="top" constant="20" id="xOB-8k-mwd"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,7 +50,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profit" image="money" id="0gs-if-ccU"/>
                     <connections>
-                        <outlet property="greetingView" destination="QQV-Yw-346" id="YiX-SG-n3T"/>
                         <outlet property="profitAmountLabel" destination="Ioe-yU-dZ4" id="geX-C0-7lM"/>
                     </connections>
                 </viewController>
@@ -303,65 +280,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00g-XE-Hps" userLabel="subView">
-                                <rect key="frame" x="0.0" y="63" width="374" height="685"/>
+                                <rect key="frame" x="0.0" y="-1" width="374" height="813"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="     Good Morning (name)    You've made a total profit of :" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UaE-18-4HD" userLabel="greetingView">
-                                        <rect key="frame" x="49" y="89" width="290" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="Dwq-yD-PjP"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2y-vB-49q" userLabel="investementAmountLabel">
-                                        <rect key="frame" x="58" y="264" width="240" height="86"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="86" id="fwd-hr-DBe"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2y-vB-49q" userLabel="investementAmountLabel">
+                                        <rect key="frame" x="58" y="301" width="240" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Investment Made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioQ-Aa-Pxl" userLabel="profitText">
-                                        <rect key="frame" x="60" y="20" width="254" height="29"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Investment Made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioQ-Aa-Pxl" userLabel="profitText">
+                                        <rect key="frame" x="58" y="144" width="265" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="R2y-vB-49q" firstAttribute="top" secondItem="UaE-18-4HD" secondAttribute="bottom" constant="47" id="6K2-4z-aBm"/>
-                                    <constraint firstItem="UaE-18-4HD" firstAttribute="leading" secondItem="00g-XE-Hps" secondAttribute="leading" constant="49" id="IE5-fP-cog"/>
-                                    <constraint firstItem="R2y-vB-49q" firstAttribute="leading" secondItem="00g-XE-Hps" secondAttribute="leading" constant="58" id="Kkm-2u-Qow"/>
-                                    <constraint firstAttribute="trailing" secondItem="UaE-18-4HD" secondAttribute="trailing" constant="35" id="LdW-44-I7b"/>
-                                    <constraint firstAttribute="trailing" secondItem="R2y-vB-49q" secondAttribute="trailing" constant="76" id="Mde-ee-F3P"/>
-                                    <constraint firstItem="ioQ-Aa-Pxl" firstAttribute="leading" secondItem="00g-XE-Hps" secondAttribute="leading" constant="60" id="ZtH-0V-Hyf"/>
-                                    <constraint firstItem="UaE-18-4HD" firstAttribute="top" secondItem="ioQ-Aa-Pxl" secondAttribute="bottom" constant="40" id="i89-iy-1Qk"/>
-                                    <constraint firstItem="ioQ-Aa-Pxl" firstAttribute="top" secondItem="00g-XE-Hps" secondAttribute="top" constant="20" id="n4Z-YS-Cgs"/>
-                                    <constraint firstAttribute="trailing" secondItem="ioQ-Aa-Pxl" secondAttribute="trailing" constant="60" id="vwy-Te-sE4"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="00g-XE-Hps" firstAttribute="top" secondItem="BT3-2s-gkm" secondAttribute="top" constant="19" id="Imm-Fg-GFk"/>
-                            <constraint firstItem="00g-XE-Hps" firstAttribute="leading" secondItem="C6J-Yo-86Z" secondAttribute="leading" id="c5U-e4-5Rb"/>
-                            <constraint firstItem="00g-XE-Hps" firstAttribute="centerY" secondItem="C6J-Yo-86Z" secondAttribute="centerY" id="dbf-mL-YWf"/>
+                            <constraint firstItem="00g-XE-Hps" firstAttribute="centerY" secondItem="C6J-Yo-86Z" secondAttribute="centerY" id="V7g-Q0-cyG"/>
+                            <constraint firstItem="00g-XE-Hps" firstAttribute="centerX" secondItem="C6J-Yo-86Z" secondAttribute="centerX" id="aZ4-QR-W6y"/>
+                            <constraint firstAttribute="bottom" secondItem="00g-XE-Hps" secondAttribute="bottom" id="gv8-uP-u8a"/>
+                            <constraint firstItem="00g-XE-Hps" firstAttribute="leading" secondItem="C6J-Yo-86Z" secondAttribute="leading" id="qSJ-d4-y1H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BT3-2s-gkm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Investment" image="investment" id="tXG-cn-b1i"/>
                     <connections>
-                        <outlet property="greetingView" destination="UaE-18-4HD" id="m4j-AI-2q9"/>
                         <outlet property="investmentLabel" destination="R2y-vB-49q" id="UfM-bo-MSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrN-jj-LcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1246" y="1136"/>
+            <point key="canvasLocation" x="-1247.2" y="1135.7142857142858"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LOr-Sr-C5a">

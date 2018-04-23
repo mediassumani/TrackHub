@@ -8,7 +8,7 @@
 
 import CoreData
 import UIKit
-/*
+
 struct CoreDataHelper{
     static let objectContext: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
@@ -46,10 +46,18 @@ struct CoreDataHelper{
         saveProduct()
     }
     
-    // Funxtion to fetch/grab all of the client's products and return them in an Array
+    // Function to fetch/grab all of the client's products and return them in an Array
     static func fetchAllProduct() -> [Product]{
-        return []
+        do{
+            let fetchRequest = NSFetchRequest<Product>(entityName: "Product")
+            let fetchResult = try objectContext.fetch(fetchRequest)
+            
+            return fetchResult
+        } catch let error {
+            print("Could not retrieve the user's products")
+            return []
+        }
     }
     
 }
-*/
+

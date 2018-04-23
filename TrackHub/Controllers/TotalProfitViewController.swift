@@ -11,18 +11,13 @@ import UIKit
 public class TotalProfitViewController: UIViewController{
 
     // - MARK : @IBOULETS
-    
-    @IBOutlet weak var greetingView: UITextView!
+
     @IBOutlet weak var profitAmountLabel: UILabel!
     
     // - VIEW CONTROLLER METHODS
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-            // SETTING UP VIEWS
-        greetingView.allowsEditingTextAttributes = false
-        
-        TimeHelper.singleton.displayGreeting(greetingTextView: greetingView)
     }
     
     override public func viewWillAppear(_ animated: Bool) {

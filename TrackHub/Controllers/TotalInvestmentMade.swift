@@ -10,13 +10,11 @@ import UIKit
 
 class TotalInvestmentMade: UIViewController {
 
-    @IBOutlet weak var greetingView: UITextView!
     @IBOutlet weak var investmentLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TimeHelper.singleton.displayGreeting(greetingTextView: greetingView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
