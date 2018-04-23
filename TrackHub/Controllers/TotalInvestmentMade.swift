@@ -10,7 +10,8 @@ import UIKit
 
 class TotalInvestmentMade: UIViewController {
 
-    @IBOutlet weak var investmentLabel: UILabel!
+
+    @IBOutlet weak var totalInvestmentLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -18,7 +19,7 @@ class TotalInvestmentMade: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        investmentLabel.text = "$" + Product.totalInvestment.convertDoubleToString()
+        totalInvestmentLabel.text = "$" + Product.totalInvestment.convertDoubleToString()
     }
 
     override func didReceiveMemoryWarning() {

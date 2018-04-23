@@ -8,7 +8,7 @@
 
 import CoreData
 import UIKit
-
+/*
 struct CoreDataHelper{
     static let objectContext: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
@@ -20,7 +20,6 @@ struct CoreDataHelper{
         
         return context
     }()
-    
                     // IMPORTANT METHODS
     
         // Function to craete a new product instance and insert it into the coreData store
@@ -58,6 +57,5 @@ struct CoreDataHelper{
             return []
         }
     }
-    
 }
-
+*/
