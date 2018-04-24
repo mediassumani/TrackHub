@@ -22,22 +22,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNd-aE-7DD" userLabel="subView">
                                 <rect key="frame" x="0.0" y="94" width="375" height="635"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-yU-dZ4" userLabel="investmentAmount">
-                                        <rect key="frame" x="113" y="220" width="136" height="113"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have a projected profit of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq5-jA-aFd" userLabel="profitText">
-                                        <rect key="frame" x="52" y="99" width="283" height="94"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sYW-bt-NhP">
+                                        <rect key="frame" x="50" y="100" width="275" height="235"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You have a projected profit of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq5-jA-aFd" userLabel="profitText">
+                                                <rect key="frame" x="0.33333333333334281" y="0.0" width="274.66666666666663" height="163.33333333333334"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-yU-dZ4" userLabel="investmentAmount">
+                                                <rect key="frame" x="119.33333333333336" y="163.33333333333331" width="36.666666666666671" height="71.666666666666686"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81403559446334839" green="0.92838078737258911" blue="0.95339351892471313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sYW-bt-NhP" secondAttribute="trailing" constant="50" id="Bpy-vl-xTD"/>
+                                    <constraint firstItem="sYW-bt-NhP" firstAttribute="leading" secondItem="QNd-aE-7DD" secondAttribute="leading" constant="50" id="Zr8-8L-Vgw"/>
+                                    <constraint firstAttribute="bottom" secondItem="sYW-bt-NhP" secondAttribute="bottom" constant="300" id="b0M-YH-Lyf"/>
+                                    <constraint firstItem="sYW-bt-NhP" firstAttribute="top" secondItem="QNd-aE-7DD" secondAttribute="top" constant="100" id="o9l-LZ-cHb"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQu-yK-56R">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
@@ -326,22 +335,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mp-9c-dfN" userLabel="subView">
                                 <rect key="frame" x="0.0" y="94" width="375" height="635"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBA-8x-jQg" userLabel="profitAmountLabel">
-                                        <rect key="frame" x="113" y="220" width="136" height="113"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Have invested a total of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS3-n3-scC" userLabel="profitText">
-                                        <rect key="frame" x="48" y="99" width="267" height="94"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-OX-A6E">
+                                        <rect key="frame" x="50" y="100" width="275" height="235"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You have invested a total of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS3-n3-scC" userLabel="profitText">
+                                                <rect key="frame" x="9.3333333333333428" y="0.0" width="256.66666666666663" height="163.33333333333334"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBA-8x-jQg" userLabel="profitAmountLabel">
+                                                <rect key="frame" x="119.33333333333336" y="163.33333333333331" width="36.666666666666671" height="71.666666666666686"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81403559446334839" green="0.92838078737258911" blue="0.95339351892471313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Qbh-OX-A6E" firstAttribute="top" secondItem="3Mp-9c-dfN" secondAttribute="top" constant="100" id="VOy-ew-aIp"/>
+                                    <constraint firstItem="Qbh-OX-A6E" firstAttribute="leading" secondItem="3Mp-9c-dfN" secondAttribute="leading" constant="50" id="elb-Mu-19g"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qbh-OX-A6E" secondAttribute="bottom" constant="300" id="lhP-sV-TKS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qbh-OX-A6E" secondAttribute="trailing" constant="50" id="utE-eu-jIV"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWb-hw-nbV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
