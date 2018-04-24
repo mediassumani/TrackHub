@@ -1,5 +1,5 @@
 # TrackHub </br>
-An inventory iOS App for small business owners to keep track of their products
+An inventory iOS App written in Swift for small business owners to keep track of their products
 
 <img src= "Screenshots/launchscreen.jpg" width = 250 height = 400> </br>
 # CORE CONCEPT
@@ -10,5 +10,10 @@ TrackHub is an inventoy - based application that provides the client with key in
 * <i>Medi Assumani, Rising iOS Developer</i> </br>
 
 # FEATURES
+
+* List of Products with name, image, and the product's product.
+* Synchronous information on projected of profits of all products.
+* Synchronous information on the total amount invested on all products.
+* "Add" button to give the user ability to log each products they have.
 
 
