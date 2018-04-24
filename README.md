@@ -12,14 +12,22 @@ TrackHub is an inventoy - based application that provides the client with key in
 # FEATURES
 
 * List of Products with name, image, and the product's product.
-* Synchronous information on projected of profits of all products.
-* Synchronous information on the total amount invested on all products.
+* Synchronous information on projected profits made of all products based on provided data.
+* Synchronous information on the total amount invested on all products based on provided data.
 * "Add" button to give the user ability to log each products they have. </br>
 
 # TECHNOLOGY
 * Swift 4.0
 * CoreData
 * iOS 11
-* Xcode 9.0
+* Xcode 9.0 </br>
 
+# IMPLEMENTATIONS
+
+* Developed the entire UI and connected them with the Swift Code.
+* Used UIKit's Tab Controller to structure the application better.
+* Implemented a UITableView to contain all the user's products.
+* Developed an Algorithm to calculate the total profits and total investment of all products.
+* Developed an Algorithm to calculate each profit made off a product.
+* I emplimented auto layout of each view controller in the app.
 
