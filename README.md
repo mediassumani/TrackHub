@@ -1,3 +1,2 @@
-Created by Assumani, Medi on 3/26/18.
-
-# Under Construction
+# TrackHub </br>
+An inventory iOS App for small business owners to keep track of their products
