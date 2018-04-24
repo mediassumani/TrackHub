@@ -14,6 +14,12 @@ TrackHub is an inventoy - based application that provides the client with key in
 * List of Products with name, image, and the product's product.
 * Synchronous information on projected of profits of all products.
 * Synchronous information on the total amount invested on all products.
-* "Add" button to give the user ability to log each products they have.
+* "Add" button to give the user ability to log each products they have. </br>
+
+# TECHNOLOGY
+* Swift 4.0
+* CoreData
+* iOS 11
+* Xcode 9.0
 
 
