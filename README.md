@@ -34,6 +34,6 @@ TrackHub is an inventoy - based application that provides the client with key in
 
 # SCREENSHOTS
 
-<img src= "Screenshots\homePage.png" width = 250 height = 400> 
-<img src= "Screenshots/createProduct.png" width = 250 height = 400> 
+<img src= "Screenshots\homePage.png" width = 250 height = 450> 
+<img src= "Screenshots/createProduct.png" width = 250 height = 450> 
 
