@@ -30,5 +30,9 @@ TrackHub is an inventoy - based application that provides the client with key in
 * Developed an Algorithm to calculate the total profits and total investment of all products.
 * Developed an Algorithm to calculate each profit made off a product.
 * I emplimented auto layout of each view controller in the app.
-* I emplimented teh entire Core Data scheme and helper methods of the app to persist each product's data.
+* I emplimented teh entire Core Data scheme and helper methods of the app to persist each product's data. </br>
+
+# SCREENSHOTS
+
+<img src= "homePage.png" width = 250 height = 400> </br><img src= "Screenshots/createProduct.png" width = 250 height = 400> </br>
 
