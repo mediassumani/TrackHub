@@ -67,28 +67,18 @@ class ShowProductViewController: UIViewController {
     // MARK: CLASS METHODS
 
     internal func setProductImage(_ product: Product) -> UIImage{
-        
-        
+
         var productImage: UIImage?
                 // Assigning the correct image to the product
         let pickerValue = listOfPruductCategories[pickerView.selectedRow(inComponent: 0)]
-        
             if pickerValue == "Long Dress"{
-                
                 productImage = UIImage(named: "longDress")
-                
             }else if pickerValue == "Short Dress"{
-                
                 productImage = UIImage(named: "shortDress")
-                
             }else if pickerValue == "Pant" {
-                
                 productImage = UIImage(named: "pants")
-                
             }else if pickerValue == "Sandal" {
-                
                 productImage = UIImage(named: "sandals")
-                
             } else if pickerValue == "Lady Top"{
                 productImage = UIImage(named: "ladyTop")
             }else{
@@ -96,5 +86,4 @@ class ShowProductViewController: UIViewController {
             }
         return productImage!
     }
-
 }
