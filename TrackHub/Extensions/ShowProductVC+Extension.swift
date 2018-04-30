@@ -5,7 +5,7 @@
 //  Created by Assumani, Medi on 4/22/18.
 //  Copyright © 2018 Assumani, Medi. All rights reserved.
 //
-/*
+
 import Foundation
 import UIKit
 
@@ -23,10 +23,11 @@ extension ShowProductViewController{
             product?.productSize = productSizeLabel.text ?? ""
             product?.productCategory = productCategoryLabel.text ?? ""
             product?.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
-            product?.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
+            product?.productPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
             product?.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
             
             destination.tableView.reloadData()
+            CoreDataHelper.saveProduct()
             
         case "save" where product == nil:
             
@@ -37,11 +38,12 @@ extension ShowProductViewController{
             product.productCategory = productCategoryLabel.text!
             product.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
             product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
-            product.ProductPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
+            product.productPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
             product.productImage = setProductImage(product)
             product.setProductProfit(product.getProductProfit())
             product.setProductInvestment(product.productWholeSalePrice)
             destination.userProducts.append(product)
+            CoreDataHelper.saveProduct()
         default:
             print("Unexpected identifier")
         }
@@ -101,6 +103,3 @@ extension ShowProductViewController: UITextFieldDelegate{
         return true
     }
 }
-
-
-*/

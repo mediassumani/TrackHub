@@ -11,7 +11,7 @@ import Foundation
 
 class ShowProductViewController: UIViewController {
     
-    // MARK: Class Properties
+    // MARK: PROPERTIES
     var product: Product?
     let listOfPruductCategories: [String] = ["Long Dress","Short Dress","Sandal","Pant","Lady Top"]
     var pickerView = UIPickerView() // will hold all the product category choices
@@ -29,16 +29,16 @@ class ShowProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = product?.productName
-        self.pickerView.delegate = self as? UIPickerViewDelegate
-        self.pickerView.dataSource = self as? UIPickerViewDataSource
+        self.pickerView.delegate = self as UIPickerViewDelegate
+        self.pickerView.dataSource = self as UIPickerViewDataSource
         productCategoryLabel.inputView = pickerView
-        self.productNameLabel.delegate = self as? UITextFieldDelegate
-        self.productSizeLabel.delegate = self as? UITextFieldDelegate
-        self.productCategoryLabel.delegate = self as? UITextFieldDelegate
-        self.productBrandLabel.delegate = self as? UITextFieldDelegate
-        self.wholesalePriceLabel.delegate = self as? UITextFieldDelegate
-        self.amazonPriceLabel.delegate = self as? UITextFieldDelegate
-        self.sellingPriceLabel.delegate = self as? UITextFieldDelegate
+        self.productNameLabel.delegate = self as UITextFieldDelegate
+        self.productSizeLabel.delegate = self as UITextFieldDelegate
+        self.productCategoryLabel.delegate = self as UITextFieldDelegate
+        self.productBrandLabel.delegate = self as UITextFieldDelegate
+        self.wholesalePriceLabel.delegate = self as UITextFieldDelegate
+        self.amazonPriceLabel.delegate = self as UITextFieldDelegate
+        self.sellingPriceLabel.delegate = self as UITextFieldDelegate
         
     }
     

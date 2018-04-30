@@ -25,15 +25,15 @@ class MainMenuViewController: UIViewController{
     
     // MARK: @IBACTIONS
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue){
-        // empty for now
+        userProducts = CoreDataHelper.fetchAllProducts()
     }
     
     // MARK: VIEW CONTROLLER LIFECYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self as? UITableViewDelegate
-        tableView.dataSource = self as? UITableViewDataSource
+        tableView.delegate = self as UITableViewDelegate
+        tableView.dataSource = self as UITableViewDataSource
         tableView.separatorColor = UIColor.white
             // retrieving the products once the view loads up
         userProducts = CoreDataHelper.fetchAllProducts()
