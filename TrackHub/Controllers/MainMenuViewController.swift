@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 
+
 class MainMenuViewController: UIViewController{
     
     // MARK: @IBOULETS
@@ -31,8 +32,8 @@ class MainMenuViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.delegate = self as? UITableViewDelegate
+        tableView.dataSource = self as? UITableViewDataSource
         tableView.separatorColor = UIColor.white
     }
 

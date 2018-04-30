@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/*
 class TotalInvestmentMade: UIViewController {
 
 
@@ -28,3 +28,4 @@ class TotalInvestmentMade: UIViewController {
     }
 
 }
+*/

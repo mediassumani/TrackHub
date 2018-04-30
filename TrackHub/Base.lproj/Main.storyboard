@@ -252,9 +252,13 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wholesale Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sqq-Wd-0mp">
                                                 <rect key="frame" x="0.0" y="208.33333333333331" width="315" height="54.333333333333314"/>
+                                                <gestureRecognizers/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="DNe-Jo-0Bi" appends="YES" id="zIR-0Q-drL"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amazon Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBy-7Z-ig8" userLabel="amazonPrice">
                                                 <rect key="frame" x="0.0" y="277.66666666666669" width="315" height="54.333333333333314"/>
@@ -321,6 +325,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szq-K4-o6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="MW7-rf-bG1" userLabel="Exit" sceneMemberID="exit"/>
+                <rotationGestureRecognizer id="DNe-Jo-0Bi">
+                    <connections>
+                        <action selector="Rotation:" destination="5go-08-VUy" id="UjR-Ys-RmL"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-23" y="-262"/>
         </scene>

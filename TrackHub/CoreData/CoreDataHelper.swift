@@ -10,52 +10,44 @@ import CoreData
 import UIKit
 
 struct CoreDataHelper{
-    static let objectContext: NSManagedObjectContext = {
+    static let objectContext : NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             fatalError()
         }
-            // Getting the persitant container property from the AppDelegate file
-        let persistantConatainer = appDelegate.persistentContainer
-        let context = persistantConatainer.viewContext
+        let container = appDelegate.persistentContainer
+        let context = container.viewContext
         
         return context
     }()
-                    // IMPORTANT METHODS
-    
-        // Function to craete a new product instance and insert it into the coreData store
+    // Function to craete a new product instance and insert it into the coreData store
+
     static func createNewProduct() -> Product{
         let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: objectContext)
-        return newProduct
+        return newProduct as! Product
     }
-    
-        // Function to save a product instance into the coredata store
+     // Function to save a product instance into the coredata store
     static func saveProduct(){
         do{
             try objectContext.save()
-        }catch let error{
-            print(error.localizedDescription)
+        } catch let error {
+            print("Error Found : \(error.localizedDescription)")
         }
     }
-    
-        /* Funtion to delete a product instance from the coredata store
-        param - productToBeDeleted : an instance of type Product to be removed from the list of client's products
-        */
-    static func deleteProduct(_ productToBeDeleted: Product){
-        objectContext.delete(productToBeDeleted)
+    // Function to delete a product from the client's list of products
+    static func deleteProductFromTheInventory(_ product: Product){
+        objectContext.delete(product as NSManagedObject)
         saveProduct()
     }
-    
-    // Function to fetch/grab all of the client's products and return them in an Array
-    static func fetchAllProduct() -> [Product]{
+    // Function to retreive all of the client's products in a list
+    static func fetchAllProducts() -> [Product]{
         do{
             let fetchRequest = NSFetchRequest<Product>(entityName: "Product")
             let fetchResult = try objectContext.fetch(fetchRequest)
             
             return fetchResult
-        } catch let error {
-            print("Could not retrieve the user's products")
+        }catch let error {
+            print("Error Found: \(error.localizedDescription)")
             return []
         }
     }
 }
-

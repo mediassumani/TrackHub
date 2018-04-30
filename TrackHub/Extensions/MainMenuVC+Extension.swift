@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+/*
 extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate{
     
             // MARK:  DATA SOURCE METHODS
@@ -37,3 +37,4 @@ extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate{
     }
 }
 
+*/
