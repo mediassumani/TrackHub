@@ -68,11 +68,6 @@ extension ShowProductViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return listOfPruductCategories[row]
     }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-    }
-    
 }
         // SETTING UP THE TEXTFIELDS IN THE VC
 extension ShowProductViewController: UITextFieldDelegate{

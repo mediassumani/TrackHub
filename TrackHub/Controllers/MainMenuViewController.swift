@@ -35,7 +35,6 @@ class MainMenuViewController: UIViewController{
         tableView.delegate = self as UITableViewDelegate
         tableView.dataSource = self as UITableViewDataSource
         tableView.separatorColor = UIColor.white
-            // retrieving the products once the view loads up
         userProducts = CoreDataHelper.fetchAllProducts()
     }
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-/*
+
 public class TotalProfitViewController: UIViewController{
 
     // - MARK : @IBOULETS
@@ -25,4 +25,4 @@ public class TotalProfitViewController: UIViewController{
     }
 
 }
-*/
+
