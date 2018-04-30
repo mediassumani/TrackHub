@@ -13,7 +13,7 @@ public class TotalProfitViewController: UIViewController{
     // - MARK : @IBOULETS
 
     @IBOutlet weak var profitAmountLabel: UILabel!
-    
+
     // - VIEW CONTROLLER METHODS
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,5 @@ public class TotalProfitViewController: UIViewController{
     override public func viewWillAppear(_ animated: Bool) {
         profitAmountLabel.text = "$" + Product.totalProfit.convertDoubleToString()
     }
-
 }
 
