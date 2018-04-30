@@ -76,27 +76,22 @@ extension ShowProductViewController: UIPickerViewDelegate, UIPickerViewDataSourc
 }
         // SETTING UP THE TEXTFIELDS IN THE VC
 extension ShowProductViewController: UITextFieldDelegate{
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         switch textField {
-            
         case productNameLabel:
             productBrandLabel.becomeFirstResponder()
-            
         case productBrandLabel:
             productSizeLabel.becomeFirstResponder()
-            
         case productSizeLabel:
             wholesalePriceLabel.becomeFirstResponder()
-            
         case wholesalePriceLabel:
             amazonPriceLabel.becomeFirstResponder()
-            
         case amazonPriceLabel:
             sellingPriceLabel.becomeFirstResponder()
-            
         case sellingPriceLabel:
             productCategoryLabel.becomeFirstResponder()
-            
         default:
             productCategoryLabel.resignFirstResponder()
         }
