@@ -27,11 +27,11 @@ extension ShowProductViewController{
             product?.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
             
             destination.tableView.reloadData()
-            CoreDataHelper.saveProduct()
+            //CoreDataHelper.saveProduct()
             
         case "save" where product == nil:
             
-            let product = CoreDataHelper.createNewProduct()
+            let product = Product()
             product.productName = productNameLabel.text!
             product.productBrand = productBrandLabel.text!
             product.productSize = productSizeLabel.text!
@@ -43,7 +43,7 @@ extension ShowProductViewController{
             product.setProductProfit(product.getProductProfit())
             product.setProductInvestment(product.productWholeSalePrice)
             destination.userProducts.append(product)
-            CoreDataHelper.saveProduct()
+           // CoreDataHelper.saveProduct()
         default:
             print("Unexpected identifier")
         }

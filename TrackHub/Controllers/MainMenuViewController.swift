@@ -25,7 +25,7 @@ class MainMenuViewController: UIViewController{
     
     // MARK: @IBACTIONS
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue){
-        userProducts = CoreDataHelper.fetchAllProducts()
+        //userProducts = CoreDataHelper.fetchAllProducts()
     }
     
     // MARK: VIEW CONTROLLER LIFECYCLE
@@ -35,7 +35,7 @@ class MainMenuViewController: UIViewController{
         tableView.delegate = self as UITableViewDelegate
         tableView.dataSource = self as UITableViewDataSource
         tableView.separatorColor = UIColor.white
-        userProducts = CoreDataHelper.fetchAllProducts()
+        //userProducts = CoreDataHelper.fetchAllProducts()
     }
 
     // MARK: SEGUES METHODS

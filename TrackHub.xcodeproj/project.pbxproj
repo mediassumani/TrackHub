@@ -92,7 +92,6 @@
 				67681E2A206944CD0030F0B1 /* Networking */,
 				67681E29206944C70030F0B1 /* Views */,
 				67681E28206944C00030F0B1 /* Controllers */,
-				67681E27206944790030F0B1 /* Models */,
 				67681E12206943B30030F0B1 /* AppDelegate.swift */,
 				67681E16206943B30030F0B1 /* Main.storyboard */,
 				67681E1E206943B30030F0B1 /* LaunchScreen.storyboard */,
@@ -100,13 +99,6 @@
 				67681E21206943B30030F0B1 /* Info.plist */,
 			);
 			path = TrackHub;
-			sourceTree = "<group>";
-		};
-		67681E27206944790030F0B1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		67681E28206944C00030F0B1 /* Controllers */ = {

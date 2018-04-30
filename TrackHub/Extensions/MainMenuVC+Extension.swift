@@ -34,8 +34,8 @@ extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate{
         if editingStyle == .delete{
                 // gets the product to remove, deletes it, then updates the list
             let productToBeDeleted = userProducts[indexPath.row]
-            CoreDataHelper.deleteProductFromTheInventory(productToBeDeleted)
-            self.userProducts = CoreDataHelper.fetchAllProducts()
+           // CoreDataHelper.deleteProductFromTheInventory(productToBeDeleted)
+            //self.userProducts = CoreDataHelper.fetchAllProducts()
         }
     }
 }
