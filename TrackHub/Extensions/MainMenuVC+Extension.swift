@@ -32,7 +32,10 @@ extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableview : UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete{
+                // gets the product to remove, deletes it, then updates the list
             let productToBeDeleted = userProducts[indexPath.row]
+            CoreDataHelper.deleteProductFromTheInventory(productToBeDeleted)
+            self.userProducts = CoreDataHelper.fetchAllProducts()
         }
     }
 }
