@@ -5,7 +5,7 @@
 //  Created by Assumani, Medi on 3/30/18.
 //  Copyright © 2018 Assumani, Medi. All rights reserved.
 //
-/*
+
 import UIKit
 import Foundation
 
@@ -29,16 +29,16 @@ class ShowProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = product?.productName
-        self.pickerView.delegate = self
-        self.pickerView.dataSource = self
+        self.pickerView.delegate = self as? UIPickerViewDelegate
+        self.pickerView.dataSource = self as? UIPickerViewDataSource
         productCategoryLabel.inputView = pickerView
-        self.productNameLabel.delegate = self as UITextFieldDelegate
-        self.productSizeLabel.delegate = self as UITextFieldDelegate
-        self.productCategoryLabel.delegate = self as UITextFieldDelegate
-        self.productBrandLabel.delegate = self as UITextFieldDelegate
-        self.wholesalePriceLabel.delegate = self as UITextFieldDelegate
-        self.amazonPriceLabel.delegate = self as UITextFieldDelegate
-        self.sellingPriceLabel.delegate = self as UITextFieldDelegate
+        self.productNameLabel.delegate = self as? UITextFieldDelegate
+        self.productSizeLabel.delegate = self as? UITextFieldDelegate
+        self.productCategoryLabel.delegate = self as? UITextFieldDelegate
+        self.productBrandLabel.delegate = self as? UITextFieldDelegate
+        self.wholesalePriceLabel.delegate = self as? UITextFieldDelegate
+        self.amazonPriceLabel.delegate = self as? UITextFieldDelegate
+        self.sellingPriceLabel.delegate = self as? UITextFieldDelegate
         
     }
     
@@ -51,7 +51,7 @@ class ShowProductViewController: UIViewController {
             productSizeLabel.text = product.productSize
             productCategoryLabel.text = product.productCategory
             wholesalePriceLabel.text = product.productWholeSalePrice.convertDoubleToString()
-            amazonPriceLabel.text = product.ProductPriceOnAmazon.convertDoubleToString()
+            amazonPriceLabel.text = product.productPriceOnAmazon.convertDoubleToString()
             sellingPriceLabel.text = product.sellingPrice.convertDoubleToString()
         }else{
             productNameLabel.text = ""
@@ -98,4 +98,3 @@ class ShowProductViewController: UIViewController {
     }
 
 }
-*/

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-/*
+
 extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate{
     
             // MARK:  DATA SOURCE METHODS
@@ -32,9 +32,8 @@ extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableview : UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete{
-            userProducts.remove(at: indexPath.row)
+            let productToBeDeleted = userProducts[indexPath.row]
         }
     }
 }
 
-*/
