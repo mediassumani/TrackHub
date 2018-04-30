@@ -31,7 +31,7 @@ extension ShowProductViewController{
             
         case "save" where product == nil:
             
-            let product = Product()
+            let product = CoreDataHelper.createNewProduct()
             product.productName = productNameLabel.text!
             product.productBrand = productBrandLabel.text!
             product.productSize = productSizeLabel.text!
@@ -68,6 +68,7 @@ extension ShowProductViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return listOfPruductCategories[row]
     }
+
 }
         // SETTING UP THE TEXTFIELDS IN THE VC
 extension ShowProductViewController: UITextFieldDelegate{

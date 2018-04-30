@@ -28,7 +28,6 @@ extension Product{
     @NSManaged var productCategory: String
     @NSManaged var productImage: UIImage
     
-    
     // Instance Method - This function sets the current total profit after the stored variables have been initialized
      
     func setProductProfit(_ profit: Double){
