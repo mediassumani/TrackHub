@@ -34,16 +34,16 @@ extension ShowProductViewController{
             
             let product: Product = CoreDataHelper.createNewProduct()
             product.productName = productNameLabel.text
-            product.productBrand = productBrandLabel.text!
-            product.productSize = productSizeLabel.text!
-            product.productCategory = productCategoryLabel.text!
-            product.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
-            product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
-            product.productPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
-            product.productImage = setProductImage(product)
-            product.setProductProfit(product.getProductProfit())
-            product.setProductInvestment(product.productWholeSalePrice)
-            destination.userProducts.append(product)
+            //product.productBrand = productBrandLabel.text!
+            //product.productSize = productSizeLabel.text!
+            //product.productCategory = productCategoryLabel.text!
+            //product.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
+            //product.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
+            //product.productPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
+            //product.productImage = setProductImage(product)
+            //product.setProductProfit(product.getProductProfit())
+            //product.setProductInvestment(product.productWholeSalePrice)
+            //destination.userProducts.append(product)
             CoreDataHelper.saveProduct()
         default:
             print("Unexpected identifier")

@@ -10,7 +10,12 @@ import Foundation
 import UIKit
 import CoreData
 
-extension Product{
+extension Product {
+    
+}
+
+/*
+Product: NSManagedObject {
     
     
     // Single properties to keep track of the total investment and profit
@@ -20,7 +25,7 @@ extension Product{
     
     
     // Instance Method - This function sets the current total profit after the stored variables have been initialized
- /*
+
     func setProductProfit(_ profit: Double){
         Product.totalProfit  += profit
     }
@@ -39,6 +44,5 @@ extension Product{
     internal func getProductInvestementAmount() -> Double{
         return self.productWholeSalePrice
     }
- */
 }
-
+*/

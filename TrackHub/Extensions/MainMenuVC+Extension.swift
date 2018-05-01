@@ -22,7 +22,7 @@ extension MainMenuViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.mainMenuCellIdentifier, for: indexPath) as! ProductCell
         let product = userProducts[indexPath.row]
-        cell.productNameLabel.text = product.name
+        cell.productNameLabel.text = product.productName
         cell.productProfitLabel.text = "$" //+ product.getProductProfit().convertDoubleToString()
         //cell.productImage.image = product.productImage
         return cell
