@@ -13,13 +13,10 @@ import CoreData
 extension Product {
    
     // Single properties to keep track of the total investment and profit
-    
     static public var totalInvestment = 0.0
     static public var totalProfit = 0.0
     
-    
     // Instance Method - This function sets the current total profit after the stored variables have been initialized
-    
     func setProductProfit(_ profit: Double){
         Product.totalProfit  += profit
     }
