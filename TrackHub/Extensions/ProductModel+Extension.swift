@@ -39,4 +39,3 @@ extension Product {
         return self.productWholeSalePrice
     }
 }
-

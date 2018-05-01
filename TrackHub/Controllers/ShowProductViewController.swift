@@ -28,7 +28,7 @@ class ShowProductViewController: UIViewController {
     // MARK: VIEWCONTROLLERS LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
+        
         self.title = product?.productName
         self.pickerView.delegate = self as UIPickerViewDelegate
         self.pickerView.dataSource = self as UIPickerViewDataSource
@@ -40,12 +40,11 @@ class ShowProductViewController: UIViewController {
         self.wholesalePriceLabel.delegate = self as UITextFieldDelegate
         self.amazonPriceLabel.delegate = self as UITextFieldDelegate
         self.sellingPriceLabel.delegate = self as UITextFieldDelegate
- */
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        /*
+        
         if let product = product{
             productNameLabel.text = product.productName
             productBrandLabel.text = product.productBrand
@@ -64,7 +63,7 @@ class ShowProductViewController: UIViewController {
             amazonPriceLabel.text = ""
             sellingPriceLabel.text = ""
         }
- */
+ 
     }
  
     // MARK: CLASS METHODS
