@@ -19,7 +19,7 @@ extension ShowProductViewController{
         // SAFELY UNWRAP THEM MEDI !!!
         case "save" where product != nil:
             
-            //product?.productName = productNameLabel.text ?? ""
+            product?.productName = productNameLabel.text ?? ""
             product?.productBrand = productBrandLabel.text ?? ""
             product?.productSize = productSizeLabel.text ?? ""
             product?.productCategory = productCategoryLabel.text ?? ""
