@@ -7,7 +7,7 @@
 //
 
 import UIKit
-/*
+
 class TotalInvestmentMade: UIViewController {
 
     @IBOutlet weak var totalInvestmentLabel: UILabel!
@@ -20,4 +20,4 @@ class TotalInvestmentMade: UIViewController {
         totalInvestmentLabel.text = "$" + Product.totalInvestment.convertDoubleToString()
     }
 }
-*/
+
