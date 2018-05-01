@@ -5,7 +5,7 @@
 //  Created by Assumani, Medi on 3/26/18.
 //  Copyright © 2018 Assumani, Medi. All rights reserved.
 //
-
+/*
 import UIKit
 
 public class TotalProfitViewController: UIViewController{
@@ -24,4 +24,4 @@ public class TotalProfitViewController: UIViewController{
         profitAmountLabel.text = "$" + Product.totalProfit.convertDoubleToString()
     }
 }
-
+*/

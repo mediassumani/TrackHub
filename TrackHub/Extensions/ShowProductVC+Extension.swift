@@ -15,10 +15,11 @@ extension ShowProductViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let segueIdentifier = segue.identifier, let destination = segue.destination as? MainMenuViewController else {return}
         switch segueIdentifier {
-            
+     
         // SAFELY UNWRAP THEM MEDI !!!
         case "save" where product != nil:
-            product?.productName = productNameLabel.text ?? ""
+            
+            //product?.productName = productNameLabel.text ?? ""
             product?.productBrand = productBrandLabel.text ?? ""
             product?.productSize = productSizeLabel.text ?? ""
             product?.productCategory = productCategoryLabel.text ?? ""
@@ -27,12 +28,12 @@ extension ShowProductViewController{
             product?.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
             
             destination.tableView.reloadData()
-            //CoreDataHelper.saveProduct()
-            
+            CoreDataHelper.saveProduct()
+       
         case "save" where product == nil:
             
-            let product = Product()
-            product.productName = productNameLabel.text!
+            let product: Product = CoreDataHelper.createNewProduct()
+            product.productName = productNameLabel.text
             product.productBrand = productBrandLabel.text!
             product.productSize = productSizeLabel.text!
             product.productCategory = productCategoryLabel.text!
@@ -43,7 +44,7 @@ extension ShowProductViewController{
             product.setProductProfit(product.getProductProfit())
             product.setProductInvestment(product.productWholeSalePrice)
             destination.userProducts.append(product)
-           // CoreDataHelper.saveProduct()
+            CoreDataHelper.saveProduct()
         default:
             print("Unexpected identifier")
         }

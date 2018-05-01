@@ -22,8 +22,8 @@ struct CoreDataHelper{
     // Function to craete a new product instance and insert it into the coreData store
 
     static func createNewProduct() -> Product{
-        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: objectContext)
-        return newProduct as! Product
+        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: objectContext) as! Product
+        return newProduct
     }
      // Function to save a product instance into the coredata store
     static func saveProduct(){

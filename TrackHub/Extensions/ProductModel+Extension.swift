@@ -18,18 +18,9 @@ extension Product{
     static public var totalInvestment = 0.0
     static public var totalProfit = 0.0
     
-    // Stored properties
-    @NSManaged var productName: String
-    @NSManaged var productBrand: String
-    @NSManaged var productSize: String
-    @NSManaged var productWholeSalePrice: Double
-    @NSManaged var productPriceOnAmazon: Double
-    @NSManaged var sellingPrice: Double
-    @NSManaged var productCategory: String
-    @NSManaged var productImage: UIImage
     
     // Instance Method - This function sets the current total profit after the stored variables have been initialized
-     
+ /*
     func setProductProfit(_ profit: Double){
         Product.totalProfit  += profit
     }
@@ -39,7 +30,6 @@ extension Product{
         Product.totalInvestment += investement
     }
 
-    
     // Instance Method - returns the profit made off a specific merchandise
     internal func getProductProfit() -> Double{
         return sellingPrice - productWholeSalePrice
@@ -49,5 +39,6 @@ extension Product{
     internal func getProductInvestementAmount() -> Double{
         return self.productWholeSalePrice
     }
+ */
 }
 
