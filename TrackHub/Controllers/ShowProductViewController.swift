@@ -67,7 +67,7 @@ class ShowProductViewController: UIViewController {
     }
  
     // MARK: CLASS METHODS
-/*
+
     internal func setProductImage(_ product: Product) -> UIImage{
 
         var productImage: UIImage?
@@ -88,5 +88,4 @@ class ShowProductViewController: UIViewController {
             }
         return productImage!
     }
- */
 }
