@@ -9,8 +9,10 @@
         <attribute name="productSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productWholeSalePrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sellingPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalInvestment" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalProfit" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Product" positionX="-36" positionY="9" width="128" height="165"/>
+        <element name="Product" positionX="-36" positionY="9" width="128" height="195"/>
     </elements>
 </model>

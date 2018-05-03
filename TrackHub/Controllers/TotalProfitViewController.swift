@@ -9,19 +9,15 @@
 import UIKit
 
 public class TotalProfitViewController: UIViewController{
-
-    // - MARK : @IBOULETS
-
-    @IBOutlet weak var profitAmountLabel: UILabel!
     
 
-    // - VIEW CONTROLLER METHODS
+    @IBOutlet weak var profitAmountLabel: UILabel!
+
     override public func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override public func viewWillAppear(_ animated: Bool) {
-        profitAmountLabel.text = "$" + Product.totalProfit.convertDoubleToString()
+        
     }
 }
-

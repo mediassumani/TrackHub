@@ -9,7 +9,8 @@
 import UIKit
 
 class TotalInvestmentMade: UIViewController {
-
+    
+    let instanceOfProductClass = Product.self as! Product
     @IBOutlet weak var totalInvestmentLabel: UILabel!
     
     override func viewDidLoad() {
@@ -17,7 +18,7 @@ class TotalInvestmentMade: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        totalInvestmentLabel.text = "$" + Product.totalInvestment.convertDoubleToString()
+        //totalInvestmentLabel.text = "$" + instanceOfProductClass.totalInvestment.convertDoubleToString()
     }
 }
 
