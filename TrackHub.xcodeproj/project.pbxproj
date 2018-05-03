@@ -13,6 +13,7 @@
 		671F81E020810A8B002077DA /* MainMenuVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671F81DF20810A8B002077DA /* MainMenuVC+Extension.swift */; };
 		6736FA9F206F077800A21A13 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736FA9E206F077800A21A13 /* ProductCell.swift */; };
 		6736FAA12071678B00A21A13 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6736FAA02071678B00A21A13 /* ProductService.swift */; };
+		673EAADB209B83AA008D7927 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673EAADA209B83AA008D7927 /* CoreDataStack.swift */; };
 		67681E13206943B30030F0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67681E12206943B30030F0B1 /* AppDelegate.swift */; };
 		67681E18206943B30030F0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67681E16206943B30030F0B1 /* Main.storyboard */; };
 		67681E1B206943B30030F0B1 /* TrackHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67681E19206943B30030F0B1 /* TrackHub.xcdatamodeld */; };
@@ -33,6 +34,7 @@
 		671F81DF20810A8B002077DA /* MainMenuVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainMenuVC+Extension.swift"; sourceTree = "<group>"; };
 		6736FA9E206F077800A21A13 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		6736FAA02071678B00A21A13 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		673EAADA209B83AA008D7927 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		67681E0F206943B30030F0B1 /* TrackHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67681E12206943B30030F0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67681E17206943B30030F0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				67681E19206943B30030F0B1 /* TrackHub.xcdatamodeld */,
 				671F81DD208108C7002077DA /* CoreDataHelper.swift */,
+				673EAADA209B83AA008D7927 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673EAADB209B83AA008D7927 /* CoreDataStack.swift in Sources */,
 				67681E2E20699E970030F0B1 /* MainMenuViewController.swift in Sources */,
 				671F81DE208108C7002077DA /* CoreDataHelper.swift in Sources */,
 				670A7E2E206EBE8200C65AEA /* ShowProductViewController.swift in Sources */,
