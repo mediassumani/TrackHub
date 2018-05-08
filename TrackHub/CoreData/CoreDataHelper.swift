@@ -10,17 +10,12 @@ import CoreData
 import UIKit
 
 struct CoreDataHelper{
-    static let objectContext : NSManagedObjectContext = {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            fatalError()
-        }
-        let container = appDelegate.persistentContainer
-        let context = container.viewContext
-        
-        return context
-    }()
+    
     // Function to craete a new product instance and insert it into the coreData store
 
+    static let persistentContainer: NSPersistentContainer = CoreDataStack.sharedInstance.persistentContainer
+    static let objectContext: NSManagedObjectContext = persistentContainer.viewContext
+    
     static func createNewProduct() -> Product{
         let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: objectContext) as! Product
         return newProduct

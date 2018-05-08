@@ -7,18 +7,18 @@
 //
 
 import UIKit
+import Foundation
 
 class TotalInvestmentMade: UIViewController {
     
-    let instanceOfProductClass = Product.self as! Product
     @IBOutlet weak var totalInvestmentLabel: UILabel!
-    
+    var productInstance = Product()
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //totalInvestmentLabel.text = "$" + instanceOfProductClass.totalInvestment.convertDoubleToString()
+        //totalInvestmentLabel.text = type(of: productInstance).
     }
 }
 

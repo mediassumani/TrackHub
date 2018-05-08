@@ -12,6 +12,8 @@ import CoreData
     // extending the Product Entity to add custom methods
 extension Product {
     
+    //@NSManaged static var total: Double
+    
     // Instance Method - This function sets the current total profit after the stored variables have been initialized
     func setProductProfit(_ profit: Double){
         self.totalProfit = profit
@@ -31,4 +33,5 @@ extension Product {
     internal func getProductInvestementAmount() -> Double{
         return self.productWholeSalePrice
     }
+
 }

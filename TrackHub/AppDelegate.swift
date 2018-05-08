@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    
+/*
     // MARK: - Core Data stack
     
     var persistentContainer: NSPersistentContainer = {
@@ -90,5 +90,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+*/
 }
