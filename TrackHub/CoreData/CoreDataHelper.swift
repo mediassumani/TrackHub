@@ -10,9 +10,9 @@ import CoreData
 import UIKit
 
 struct CoreDataHelper{
-    
     // Function to craete a new product instance and insert it into the coreData store
 
+    static var SharedProduct = Product()
     static let persistentContainer: NSPersistentContainer = CoreDataStack.sharedInstance.persistentContainer
     static let objectContext: NSManagedObjectContext = persistentContainer.viewContext
     

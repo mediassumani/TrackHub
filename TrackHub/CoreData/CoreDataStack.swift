@@ -11,6 +11,7 @@ import CoreData
 
 class CoreDataStack{
     static let sharedInstance = CoreDataStack()
+    
     var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "TrackHub")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in

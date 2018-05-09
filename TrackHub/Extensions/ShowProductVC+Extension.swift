@@ -26,7 +26,7 @@ extension ShowProductViewController{
             product?.productWholeSalePrice = (wholesalePriceLabel.text?.convertSringToDouble(wholesalePriceLabel.text))!
             product?.productPriceOnAmazon = (amazonPriceLabel.text?.convertSringToDouble(amazonPriceLabel.text))!
             product?.sellingPrice = (sellingPriceLabel.text?.convertSringToDouble(sellingPriceLabel.text))!
-            
+
             destination.tableView.reloadData()
             CoreDataHelper.saveProduct()
        

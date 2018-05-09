@@ -2,7 +2,7 @@
 //  TotalInvestmentMade.swift
 //  TrackHub
 //
-//  Created by Assumani, Medi on 3/26/18.
+//  Created by Assumani, Medi on 3/26/18.Pr
 //  Copyright © 2018 Assumani, Medi. All rights reserved.
 //
 
@@ -12,13 +12,14 @@ import Foundation
 class TotalInvestmentMade: UIViewController {
     
     @IBOutlet weak var totalInvestmentLabel: UILabel!
-    var productInstance = Product()
+    //var investment = Product.sharedInstance.totalInvestment
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //totalInvestmentLabel.text = type(of: productInstance).
+        totalInvestmentLabel.text = "$\(Product.getAllInvestment())" 
     }
 }
 
