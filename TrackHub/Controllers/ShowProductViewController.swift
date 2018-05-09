@@ -9,6 +9,10 @@
 import UIKit
 import Foundation
 
+
+/*
+ This is where the user creates, modifies, and enters the data for each product 
+ */
 class ShowProductViewController: UIViewController {
     
     // MARK: PROPERTIES

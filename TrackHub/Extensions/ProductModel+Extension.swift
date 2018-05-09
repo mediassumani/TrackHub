@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 import CoreData
+
     // extending the Product Entity to add custom methods
+
 extension Product {
     
     static let sharedInstance = Product()
@@ -29,17 +31,19 @@ extension Product {
         return sellingPrice - productWholeSalePrice
     }
     
-    // Instance Method - returns the invested money on the merchandise
+    // Instance Method - returns the invested money on one merchandise
     internal func getProductInvestementAmount() -> Double{
         return self.productWholeSalePrice
     }
     
+    // Instance Method - returns the total profit off of all the merchandise
     static func getAllProfit()-> Double{
         
         let listOfProducts: [Product] = CoreDataHelper.fetchAllProducts()
         return listOfProducts.map{$0.getProductProfit()}.reduce(0.0,+)
     }
     
+    // Instance Method - returns the total invested money off of all the merchandise
     static func getAllInvestment() -> Double{
         let listOfProducts: [Product] = CoreDataHelper.fetchAllProducts()
         return  listOfProducts.map{$0.getProductInvestementAmount()}.reduce(0.0,+)

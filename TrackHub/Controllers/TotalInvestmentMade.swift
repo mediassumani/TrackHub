@@ -8,6 +8,10 @@
 
 import UIKit
 import Foundation
+/*
+    This view controller displays the Total money invested by the user based on the products
+    data that were entred.
+ */
 
 class TotalInvestmentMade: UIViewController {
     
@@ -19,7 +23,7 @@ class TotalInvestmentMade: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        totalInvestmentLabel.text = "$\(Product.getAllInvestment())" 
+        totalInvestmentLabel.text = "$\(Product.getAllInvestment())"
     }
 }
 

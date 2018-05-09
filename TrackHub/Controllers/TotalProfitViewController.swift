@@ -8,7 +8,10 @@
 
 import UIKit
 
-public class TotalProfitViewController: UIViewController{
+
+
+ // This view controller displays the Total profit made by every products that were created
+class TotalProfitViewController: UIViewController{
     
     let stack = CoreDataStack.sharedInstance
     var product = [Product]()
@@ -17,10 +20,6 @@ public class TotalProfitViewController: UIViewController{
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        /*product = {
-           return CoreDataHelper.fetchAllProducts()
-        }()
- */
     }
     
     override public func viewWillAppear(_ animated: Bool) {
