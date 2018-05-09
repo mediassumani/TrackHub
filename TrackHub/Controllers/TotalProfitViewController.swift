@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
  // This view controller displays the Total profit made by every products that were created
 class TotalProfitViewController: UIViewController{
     
