@@ -7,7 +7,7 @@ An inventory iOS App written in Swift for small business owners to keep track of
 TrackHub is an inventoy - based application that provides the client with key informations of their products based on the given inputs. Instead of writting a list of all of the business' products on a notebook and do the calculations physically, TrackHub does all those tasks for you!</br>
 # AUTHOR 
 
-* <i>Medi Assumani, iOS Developer</i> </br>
+* <i>Medi Assumani, Sole iOS Developer</i> </br>
 
 # FEATURES
 
