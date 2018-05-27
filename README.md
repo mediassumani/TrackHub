@@ -19,7 +19,7 @@ TrackHub is an inventoy - based application that provides the client with key in
 # TECHNOLOGY
 * Swift 4.0
 * CoreData
-* iOS 10
+* iOS 11
 * Xcode 9.0 </br>
 
 # IMPLEMENTATIONS
