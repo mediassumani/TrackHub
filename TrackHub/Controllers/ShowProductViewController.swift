@@ -78,19 +78,25 @@ class ShowProductViewController: UIViewController {
         var productImage: UIImage?
                 // Assigning the correct image to the product
         let pickerValue = listOfPruductCategories[pickerView.selectedRow(inComponent: 0)]
-            if pickerValue == "Long Dress"{
+        
+        switch pickerValue{
+        case "Long Dress":
                 productImage = UIImage(named: "longDress")
-            }else if pickerValue == "Short Dress"{
+        case "Short Dress":
                 productImage = UIImage(named: "shortDress")
-            }else if pickerValue == "Pant" {
+        case "Pant":
                 productImage = UIImage(named: "pants")
-            }else if pickerValue == "Sandal" {
+        case "sandals":
                 productImage = UIImage(named: "sandals")
-            } else if pickerValue == "Lady Top"{
+        case "Lady Top":
                 productImage = UIImage(named: "ladyTop")
-            }else if pickerValue == "Other"{
+        case "Other":
                 productImage = UIImage(named: "noImage")
-            }
+        default:
+            productImage = UIImage(named: "noImage")
+    
+        }
+    
         return productImage!
     }
 }
