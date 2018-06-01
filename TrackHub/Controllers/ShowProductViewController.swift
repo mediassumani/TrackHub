@@ -17,7 +17,7 @@ class ShowProductViewController: UIViewController {
     
     // MARK: PROPERTIES
     var product: Product?
-    let listOfPruductCategories: [String] = ["Long Dress","Short Dress","Sandal","Pant","Lady Top"]
+    let listOfPruductCategories: [String] = ["Long Dress","Short Dress","Sandal","Pant","Lady Top","Other"]
     var pickerView = UIPickerView() // will hold all the product category choices
     
     // MARK:  @IBOULETS
@@ -29,7 +29,8 @@ class ShowProductViewController: UIViewController {
     @IBOutlet weak var sellingPriceLabel: UITextField!
     @IBOutlet weak var productCategoryLabel: UITextField!
     
-    // MARK: VIEWCONTROLLERS LIFECYCLE
+    // MARK: VIEWCONTROLLERS LIFECYCLE METHODS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,7 +88,7 @@ class ShowProductViewController: UIViewController {
                 productImage = UIImage(named: "sandals")
             } else if pickerValue == "Lady Top"{
                 productImage = UIImage(named: "ladyTop")
-            }else{
+            }else if pickerValue == "Other"{
                 productImage = UIImage(named: "noImage")
             }
         return productImage!
