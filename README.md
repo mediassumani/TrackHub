@@ -1,5 +1,6 @@
 # TrackHub </br>
-An inventory iOS App written in Swift for small business owner to keep track of their products. I craeted this app for a freelance client but I decided to make it open source.
+An inventory iOS App written in Swift for small business owner to keep track of their products. I craeted this app for a freelance client but I decided to make it open source. </br>
+# Released Version : Version 1.0
 
 <img src= "Screenshots/launchscreen.jpg" width = 250 height = 400> </br>
 # CORE CONCEPT
@@ -30,7 +31,7 @@ TrackHub is an inventoy - based application that provides the client with key in
 * Developed an Algorithm to calculate the total profits and total investment of all products.
 * Developed an Algorithm to calculate each profit made off a product.
 * I emplimented auto layout of each view controller in the app.
-* I emplimented teh entire Core Data scheme and helper methods of the app to persist each product's data. </br>
+* I emplimented the entire Core Data scheme and helper methods of the app to persist each product's data. </br>
 
 # SCREENSHOTS
 
