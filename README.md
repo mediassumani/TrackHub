@@ -1,5 +1,5 @@
 # TrackHub </br>
-An inventory iOS App written in Swift for small business owner to keep track of their products. I craeted this app for a freelance client but I decided to make it open source. It has been released to the clinet through HockeyApp.</br>
+An inventory iOS App written in Swift for small business owner to keep track of their products. I craeted this app for a freelance client but I decided to make it open source. The Beta and version 1.0 have been released to the clinet through HockeyApp.</br>
 # Released Version : Version 1.0
 
 <img src= "Screenshots/launchscreen.jpg" width = 250 height = 400> </br>
