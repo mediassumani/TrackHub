@@ -8,7 +8,7 @@ TrackHub is an inventoy - based application that provides the client with key in
 To use the app, you can:
   * Fork it and mess around with it
   * Clone it, and run it on xcode
-  * Email me so I can add your device in the Beta versiobn list of testers</br>
+  * Email me so I can add your device in the Beta version list of testers</br>
   
 # AUTHOR 
 
