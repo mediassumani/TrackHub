@@ -3,6 +3,13 @@
 # CORE CONCEPT
 
 TrackHub is an inventoy - based application that provides the client with key informations of their products based on the given inputs. Instead of writting a list of all of the business' products on a notebook and do the calculations physically, TrackHub does all those tasks for you!</br>
+
+# Installation and Use
+To use the app, you can:
+  * Fork it and mess around with it
+  * Clone it, and run it on xcode
+  * Email me so I can add your device in the Beta versiobn list of testers</br>
+  
 # AUTHOR 
 
 * <i>Medi Assumani, Sole iOS Developer</i> </br>
