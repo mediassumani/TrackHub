@@ -1,4 +1,4 @@
-# TrackHub - Keep Track of your products</br>
+# TrackHub</br>
 # CORE CONCEPT
 
 TrackHub is an inventoy - based application that provides the client with key informations of their products based on the given inputs. Instead of writting a list of all of the business' products on a notebook and do the calculations by hands, TrackHub does all those tasks for you and you can access them right from your ios device!</br>
