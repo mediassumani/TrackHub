@@ -12,7 +12,6 @@ To use the app, you can:
 # AUTHOR 
 
 * <i>Medi Assumani, Sole Software Engineer</i> </br>
-* <i>Maceline Ambroise, The generator of the Idea and client of the app</i></br>
 
 # FEATURES
 
