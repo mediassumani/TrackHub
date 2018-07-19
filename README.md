@@ -11,7 +11,7 @@ To use the app, you can:
   
 # AUTHOR 
 
-* <i>Medi Assumani, Sole Software Engineer</i> </br>
+* <i>Medi Assumani, Sole iOS Developer</i> </br>
 
 # FEATURES
 
